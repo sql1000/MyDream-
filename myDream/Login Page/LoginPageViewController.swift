@@ -23,7 +23,8 @@ class LoginPageViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Log'in Page"
-        
+        loading.isHidden = true
+        //navigationController?.isNavigationBarHidden = true
     }
     
     
@@ -58,7 +59,7 @@ class LoginPageViewController: UIViewController {
                     if self.rememberMe.isOn {
                         UserDefaults.standard.set(true, forKey: "rememberMe")
                     }
-                    self.performSegue(withIdentifier: "", sender: nil)
+                    self.performSegue(withIdentifier: "anaSayfa", sender: nil)
                     // Kullanıcının e-posta adresi doğrulanmış, uygulamanın ana sayfasına yönlendirin.
                 }else {
                     print("E-posta adresi doğrulanmamış.")
