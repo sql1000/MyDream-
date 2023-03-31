@@ -9,6 +9,14 @@ import UIKit
 
 class LoginPageViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var loginPageEmailTextField: UITextField!
+    
+    @IBOutlet weak var loginPagePasswordTextField: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +25,11 @@ class LoginPageViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func loginPageLoginButton(_ sender: Any) {
     }
-    */
+    
+    
+    
+    
 
 }

@@ -157,6 +157,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Login">
                                     <color key="baseBackgroundColor" red="0.47450980390000003" green="0.67843137249999996" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginPageLoginButton:" destination="gD9-lL-vK5" eventType="touchUpInside" id="wgW-2e-VCi"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MyDream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFy-Bh-HmV">
                                 <rect key="frame" x="152" y="352" width="88" height="24"/>
@@ -175,6 +178,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="CQB-WO-cgp"/>
                     <connections>
+                        <outlet property="loginPageEmailTextField" destination="Rqg-tj-0pb" id="7lY-75-GgF"/>
+                        <outlet property="loginPagePasswordTextField" destination="Mbs-Qq-Yr8" id="tpy-p6-QCL"/>
                         <segue destination="zlH-Ta-gkh" kind="show" id="ySd-pB-tbR"/>
                     </connections>
                 </viewController>
@@ -191,10 +196,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rg-gS-r2S">
-                                <rect key="frame" x="142" y="294" width="147" height="35"/>
+                                <rect key="frame" x="142" y="294" width="147" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Ruya Sembolleri"/>
+                                <connections>
+                                    <action selector="ruyaSembolleriButton:" destination="zlH-Ta-gkh" eventType="touchUpInside" id="xDj-fK-neG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Gl-Qh-IS4"/>
@@ -207,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKv-ZH-chJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2096" y="-147"/>
+            <point key="canvasLocation" x="2095.8139534883721" y="-147.42489270386267"/>
         </scene>
         <!--Table View Veri View Controller-->
         <scene sceneID="oW8-eF-HEp">
@@ -245,6 +253,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="y8o-bq-fq0"/>
+                    <connections>
+                        <outlet property="sembolSearchBar" destination="HHZ-0V-kAc" id="byL-xM-Gba"/>
+                        <outlet property="sembolTableView" destination="ZD4-Bb-XzK" id="fvB-S8-zJE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZp-bq-HV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
