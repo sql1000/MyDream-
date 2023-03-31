@@ -21,10 +21,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        loading.isHidden = true
     }
 
     @IBAction func registerButton(_ sender: Any) {
+        loading.startAnimating()
+        loading.isHidden = false
         guard let email = registerEmailTextField.text, let password = registerPasswordTextfield.text else {
                return
            }
@@ -49,6 +51,7 @@ class ViewController: UIViewController {
                    }
                    
                    print("E-posta doğrulama postası başarıyla gönderildi.")
+        
                })
                
                print("Kayıt işlemi başarılı.")
