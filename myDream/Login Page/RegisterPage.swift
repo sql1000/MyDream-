@@ -10,6 +10,7 @@ import Firebase
 class ViewController: UIViewController {
     
     
+    
     @IBOutlet weak var loginRButton: UIButton!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var registerEmailTextField: UITextField!
@@ -23,6 +24,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loading.isHidden = true
+        
+        
+
     }
     
     @IBAction func registerButton(_ sender: Any) {
