@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     @IBAction func loginRRButton(_ sender: Any) {
         //performSegue(withIdentifier: "anaSayfa", sender: nil)
         
-        guard let email = registerPasswordTextfield.text, let password = registerPasswordTextfield.text else {
+        guard let email = registerEmailTextField.text, let password = registerPasswordTextfield.text else {
             return
         }
         
