@@ -16,7 +16,7 @@ class SecilenMenuViewController: UIViewController {
     
 
     @IBAction func ruyaSembolleriButton(_ sender: Any) {
-        performSegue(withIdentifier: "SecilenMenü", sender: nil)
+        performSegue(withIdentifier: "semboller", sender: nil)
     }
     
     
