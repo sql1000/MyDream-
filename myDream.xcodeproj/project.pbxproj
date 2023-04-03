@@ -21,9 +21,16 @@
 		8E3DA4D829D737A00022EC31 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3DA4D729D737A00022EC31 /* FirebaseAuth */; };
 		8E3DA4DA29D737A00022EC31 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3DA4D929D737A00022EC31 /* FirebaseDatabase */; };
 		8E3DA4DC29D737A00022EC31 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3DA4DB29D737A00022EC31 /* FirebaseFirestore */; };
+		8E5DEA1329DB632F000CAD41 /* ProfilimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1229DB632F000CAD41 /* ProfilimViewController.swift */; };
+		8E5DEA1629DB65D3000CAD41 /* mydream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1429DB65D3000CAD41 /* mydream.xcdatamodeld */; };
+		8E5DEA1829DB65F1000CAD41 /* RuyaModelleri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */; };
+		8E5DEA1A29DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1929DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift */; };
+		8E5DEA1C29DB69A6000CAD41 /* SembolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1B29DB69A6000CAD41 /* SembolCollectionViewCell.swift */; };
+		8E5DEA1E29DB6C10000CAD41 /* tabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */; };
 		8E97B4EF29D761D400213549 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4EE29D761D400213549 /* LoginPageViewController.swift */; };
 		8E97B4F129D76AB100213549 /* SecilenMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */; };
 		8E97B4F329D76AC100213549 /* TableViewVeriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */; };
+		8E9AA93729DB2A0500AFA0A4 /* YorumlamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9AA93629DB2A0500AFA0A4 /* YorumlamaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +83,16 @@
 		8E3DA4ED29D7399F0022EC31 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "Poppins/Poppins-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		8E3DA4EE29D7399F0022EC31 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "Poppins/Poppins-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		8E3DA4EF29D7399F0022EC31 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBoldItalic.ttf"; path = "Poppins/Poppins-SemiBoldItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		8E5DEA1229DB632F000CAD41 /* ProfilimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilimViewController.swift; sourceTree = "<group>"; };
+		8E5DEA1529DB65D3000CAD41 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuyaModelleri.swift; sourceTree = "<group>"; };
+		8E5DEA1929DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuyaSembollColletionViewViewController.swift; sourceTree = "<group>"; };
+		8E5DEA1B29DB69A6000CAD41 /* SembolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SembolCollectionViewCell.swift; sourceTree = "<group>"; };
+		8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarController.swift; sourceTree = "<group>"; };
 		8E97B4EE29D761D400213549 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecilenMenuViewController.swift; sourceTree = "<group>"; };
 		8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVeriViewController.swift; sourceTree = "<group>"; };
+		8E9AA93629DB2A0500AFA0A4 /* YorumlamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YorumlamaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +151,12 @@
 				8E3DA4A429D734DE0022EC31 /* SceneDelegate.swift */,
 				8E97B4ED29D7619300213549 /* Login Page */,
 				8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */,
+				8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */,
+				8E9AA93629DB2A0500AFA0A4 /* YorumlamaViewController.swift */,
+				8E5DEA1929DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift */,
+				8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */,
+				8E5DEA1B29DB69A6000CAD41 /* SembolCollectionViewCell.swift */,
+				8E5DEA1229DB632F000CAD41 /* ProfilimViewController.swift */,
 				8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */,
 				8E3DA4A829D734DE0022EC31 /* Main.storyboard */,
 				8E3DA4AB29D734E00022EC31 /* Assets.xcassets */,
@@ -159,6 +179,7 @@
 		8E3DA4C229D734E00022EC31 /* myDreamUITests */ = {
 			isa = PBXGroup;
 			children = (
+				8E5DEA1429DB65D3000CAD41 /* mydream.xcdatamodeld */,
 				8E3DA4C329D734E00022EC31 /* myDreamUITests.swift */,
 				8E3DA4C529D734E00022EC31 /* myDreamUITestsLaunchTests.swift */,
 			);
@@ -340,11 +361,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5DEA1329DB632F000CAD41 /* ProfilimViewController.swift in Sources */,
 				8E3DA4A729D734DE0022EC31 /* RegisterPage.swift in Sources */,
 				8E97B4EF29D761D400213549 /* LoginPageViewController.swift in Sources */,
 				8E3DA4A329D734DE0022EC31 /* AppDelegate.swift in Sources */,
 				8E97B4F129D76AB100213549 /* SecilenMenuViewController.swift in Sources */,
+				8E5DEA1E29DB6C10000CAD41 /* tabbarController.swift in Sources */,
+				8E5DEA1829DB65F1000CAD41 /* RuyaModelleri.swift in Sources */,
+				8E5DEA1629DB65D3000CAD41 /* mydream.xcdatamodeld in Sources */,
+				8E5DEA1A29DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift in Sources */,
 				8E97B4F329D76AC100213549 /* TableViewVeriViewController.swift in Sources */,
+				8E9AA93729DB2A0500AFA0A4 /* YorumlamaViewController.swift in Sources */,
+				8E5DEA1C29DB69A6000CAD41 /* SembolCollectionViewCell.swift in Sources */,
 				8E3DA4A529D734DE0022EC31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -723,6 +751,19 @@
 			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		8E5DEA1429DB65D3000CAD41 /* mydream.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8E5DEA1529DB65D3000CAD41 /* Model.xcdatamodel */,
+			);
+			currentVersion = 8E5DEA1529DB65D3000CAD41 /* Model.xcdatamodel */;
+			path = mydream.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8E3DA49729D734DE0022EC31 /* Project object */;
 }

@@ -25,6 +25,13 @@ class LoginPageViewController: UIViewController {
         navigationItem.title = "Log'in Page"
         loading.isHidden = true
         //navigationController?.isNavigationBarHidden = true
+        
+        
+               // Otomaik giris
+               if UserDefaults.standard.bool(forKey: "rememberMe") && Auth.auth().currentUser != nil {
+                   self.performSegue(withIdentifier: "anaSayfa", sender: nil)
+               }
+           
     }
     
     
