@@ -14,7 +14,7 @@ class ProfilimViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Profil Seçenekleri"
-        
+        //kopya lsdfdnnsndjng
         guard let userEmail = Auth.auth().currentUser?.email else {
                     // Kullanıcı giriş yapmamışsa ya da email adresi kayıtlı değilse nil döndür
                     return

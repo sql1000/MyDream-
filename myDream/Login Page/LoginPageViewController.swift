@@ -21,8 +21,15 @@ class LoginPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+                title: "Login",
+                style: .done,
+                target: nil,
+                action: nil
+            )
+        navigationItem.backBarButtonItem?.tintColor = .red
         
-        navigationItem.title = "Log'in Page"
+        navigationItem.title = "Login"
         loading.isHidden = true
         //navigationController?.isNavigationBarHidden = true
         
