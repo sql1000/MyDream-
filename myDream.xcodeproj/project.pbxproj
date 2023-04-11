@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		848CB4F129E621D600B11186 /* ruyaEkleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CB4F029E621D600B11186 /* ruyaEkleViewController.swift */; };
 		8E3DA4A329D734DE0022EC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4A229D734DE0022EC31 /* AppDelegate.swift */; };
 		8E3DA4A529D734DE0022EC31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4A429D734DE0022EC31 /* SceneDelegate.swift */; };
 		8E3DA4A729D734DE0022EC31 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4A629D734DE0022EC31 /* RegisterPage.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		848CB4F029E621D600B11186 /* ruyaEkleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ruyaEkleViewController.swift; sourceTree = "<group>"; };
 		8E3DA49F29D734DE0022EC31 /* myDream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myDream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3DA4A229D734DE0022EC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E3DA4A429D734DE0022EC31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				8E5DEA1B29DB69A6000CAD41 /* SembolCollectionViewCell.swift */,
 				8E5DEA1229DB632F000CAD41 /* ProfilimViewController.swift */,
 				8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */,
+				848CB4F029E621D600B11186 /* ruyaEkleViewController.swift */,
 				8E3DA4A829D734DE0022EC31 /* Main.storyboard */,
 				8E3DA4AB29D734E00022EC31 /* Assets.xcassets */,
 				8E3DA4DD29D7396B0022EC31 /* Fonts */,
@@ -375,6 +378,7 @@
 				8E5DEA1E29DB6C10000CAD41 /* tabbarController.swift in Sources */,
 				8E5DEA1829DB65F1000CAD41 /* RuyaModelleri.swift in Sources */,
 				8E7424E729E591970062D391 /* DreamViewController.swift in Sources */,
+				848CB4F129E621D600B11186 /* ruyaEkleViewController.swift in Sources */,
 				8E5DEA1629DB65D3000CAD41 /* mydream.xcdatamodeld in Sources */,
 				8E5DEA1A29DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift in Sources */,
 				8E7424E329E58E510062D391 /* DreamSaveViewController.swift in Sources */,

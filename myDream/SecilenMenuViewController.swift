@@ -148,7 +148,7 @@ class SecilenMenuViewController: UIViewController {
     
     
     @IBAction func ruyaYorumlamaButton(_ sender: Any) {
-        performSegue(withIdentifier: "ruyalar", sender: nil)
+        performSegue(withIdentifier: "ruyaKaydet", sender: nil)
 
     }
    
