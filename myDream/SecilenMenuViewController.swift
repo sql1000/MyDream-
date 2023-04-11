@@ -148,8 +148,10 @@ class SecilenMenuViewController: UIViewController {
     
     
     @IBAction func ruyaYorumlamaButton(_ sender: Any) {
-        performSegue(withIdentifier: "yorumlama", sender: nil)
+        performSegue(withIdentifier: "ruyalar", sender: nil)
+
     }
+   
     
     // Semboller lisstesini prepare func gondermek!
     @IBAction func ruyaSembolleriButton(_ sender: Any) {

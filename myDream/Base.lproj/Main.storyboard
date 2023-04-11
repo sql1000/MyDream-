@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxd-AW-KWE">
-                                <rect key="frame" x="42" y="491" width="77.666666666666686" height="21"/>
+                                <rect key="frame" x="42.000000000000007" y="491" width="77.666666666666686" height="21"/>
                                 <fontDescription key="fontDescription" name="Poppins-Black" family="Poppins Black" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -315,7 +315,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="ruyaSembolleriButton:" destination="zlH-Ta-gkh" eventType="touchUpInside" id="0dX-tq-c1E"/>
+                                    <action selector="ruyaYorumlamaButton:" destination="zlH-Ta-gkh" eventType="touchUpInside" id="TUz-k7-1sA"/>
+                                    <segue destination="DfI-X9-PCT" kind="show" identifier="ruyalar" id="mQi-tK-sCt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -352,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKv-ZH-chJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549.3023255813955" y="1348.0686695278971"/>
+            <point key="canvasLocation" x="2547" y="1364"/>
         </scene>
         <!--Semboller-->
         <scene sceneID="Wkz-K6-Fsc">
@@ -433,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jm4-8O-2ke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4326.9767441860467" y="1636.480686695279"/>
+            <point key="canvasLocation" x="4327" y="1574"/>
         </scene>
         <!--Ayarlar-->
         <scene sceneID="Ybc-dI-bk6">
@@ -451,6 +452,9 @@
                                     <action selector="hesabiSil:" destination="9HQ-GN-W4w" eventType="touchUpInside" id="5nl-bx-b0M"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hesabımarka" translatesAutoresizingMaskIntoConstraints="NO" id="TdD-zA-9SU">
+                                <rect key="frame" x="5" y="104" width="421" height="672"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="syr-VX-Ocz"/>
                         <color key="backgroundColor" red="0.72549019607843135" green="0.90980392156862744" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
@@ -458,6 +462,10 @@
                             <constraint firstItem="syr-VX-Ocz" firstAttribute="trailing" secondItem="J3D-n2-kDF" secondAttribute="trailing" constant="114" id="Laq-7F-Jfv"/>
                             <constraint firstItem="J3D-n2-kDF" firstAttribute="height" secondItem="mqN-D8-Gu1" secondAttribute="height" multiplier="0.0375536" id="Mzc-ia-RtY"/>
                             <constraint firstItem="J3D-n2-kDF" firstAttribute="leading" secondItem="syr-VX-Ocz" secondAttribute="leading" constant="114" id="Pik-fq-DJq"/>
+                            <constraint firstItem="J3D-n2-kDF" firstAttribute="top" secondItem="TdD-zA-9SU" secondAttribute="bottom" constant="38" id="XI6-iG-AFF"/>
+                            <constraint firstItem="TdD-zA-9SU" firstAttribute="leading" secondItem="syr-VX-Ocz" secondAttribute="leading" constant="5" id="Xc7-N3-5bM"/>
+                            <constraint firstItem="TdD-zA-9SU" firstAttribute="trailing" secondItem="syr-VX-Ocz" secondAttribute="trailing" constant="-4" id="ZM7-R5-vXx"/>
+                            <constraint firstItem="TdD-zA-9SU" firstAttribute="top" secondItem="syr-VX-Ocz" secondAttribute="top" constant="1" id="rcn-ih-J4D"/>
                             <constraint firstItem="syr-VX-Ocz" firstAttribute="bottom" secondItem="J3D-n2-kDF" secondAttribute="bottom" constant="49" id="tQg-Gc-yni"/>
                         </constraints>
                     </view>
@@ -513,7 +521,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xd-YZ-5gZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5254.1984732824421" y="1026.7605633802818"/>
+            <point key="canvasLocation" x="4327" y="915"/>
         </scene>
         <!--Tabbar Controller-->
         <scene sceneID="8QF-Je-1LE">
@@ -585,6 +593,96 @@
             </objects>
             <point key="canvasLocation" x="2497" y="2080"/>
         </scene>
+        <!--Dream View Controller-->
+        <scene sceneID="5IP-1m-D4j">
+            <objects>
+                <viewController id="DfI-X9-PCT" customClass="DreamViewController" customModule="myDream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OiV-wi-BbV">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xm3-au-hfU">
+                                <rect key="frame" x="0.0" y="103" width="430" height="829"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pFz-ua-FiK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xm3-au-hfU" firstAttribute="leading" secondItem="pFz-ua-FiK" secondAttribute="leading" id="0Rx-Nj-QXg"/>
+                            <constraint firstItem="pFz-ua-FiK" firstAttribute="trailing" secondItem="Xm3-au-hfU" secondAttribute="trailing" id="DQ8-PL-oHg"/>
+                            <constraint firstItem="Xm3-au-hfU" firstAttribute="top" secondItem="pFz-ua-FiK" secondAttribute="top" id="L3a-sa-DLI"/>
+                            <constraint firstItem="pFz-ua-FiK" firstAttribute="bottom" secondItem="Xm3-au-hfU" secondAttribute="bottom" constant="-34" id="lYN-pu-ZKd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bxY-YR-oBF"/>
+                    <connections>
+                        <outlet property="tableView" destination="Xm3-au-hfU" id="22b-Jz-mzo"/>
+                        <segue destination="zu1-Qf-Gnh" kind="show" identifier="" id="obj-RT-LZv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xHM-1x-Z5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3423" y="2079"/>
+        </scene>
+        <!--Dream Save View Controller-->
+        <scene sceneID="zFV-61-wAR">
+            <objects>
+                <viewController id="zu1-Qf-Gnh" customClass="DreamSaveViewController" customModule="myDream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fVp-10-kH3">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rüyanın Başlığı" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MR2-Q2-QSG">
+                                <rect key="frame" x="108" y="597" width="214" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rüyanın Tarihi" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bus-8Z-B25">
+                                <rect key="frame" x="108" y="670" width="214" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ee2-VV-eOU">
+                                <rect key="frame" x="177" y="732" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Kaydet"/>
+                                <connections>
+                                    <action selector="kaydetButton:" destination="zu1-Qf-Gnh" eventType="touchUpInside" id="CAp-Bj-CE0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rüyanın Tarihi" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Usy-o5-exG">
+                                <rect key="frame" x="108" y="670" width="214" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Rüyanızı buraya yazabilirsiniz. " translatesAutoresizingMaskIntoConstraints="NO" id="dPN-h1-5j9">
+                                <rect key="frame" x="47" y="98" width="337" height="478"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TSf-Wi-4XV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pwl-Pw-Coh"/>
+                    <connections>
+                        <outlet property="ruyaBaslikTextField" destination="MR2-Q2-QSG" id="3nj-6G-LFr"/>
+                        <outlet property="ruyaTarihTextField" destination="Usy-o5-exG" id="zWc-6K-DXb"/>
+                        <outlet property="textView" destination="dPN-h1-5j9" id="bRd-wm-PQ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAq-Ze-LMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4327" y="2274"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="YlV-Lc-cCg">
             <objects>
@@ -624,7 +722,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TWa-22-c2F"/>
+        <segue reference="aBI-XX-SOb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arkaLogo1" width="626" height="417"/>
@@ -633,12 +731,16 @@
         <image name="cloud.fill" catalog="system" width="128" height="87"/>
         <image name="film" catalog="system" width="128" height="93"/>
         <image name="film.fill" catalog="system" width="128" height="93"/>
+        <image name="hesabımarka" width="900" height="1600"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="pp" width="375" height="375"/>
         <image name="yeniarka" width="900" height="1600"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

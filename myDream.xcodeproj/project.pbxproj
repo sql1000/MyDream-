@@ -27,6 +27,8 @@
 		8E5DEA1A29DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1929DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift */; };
 		8E5DEA1C29DB69A6000CAD41 /* SembolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1B29DB69A6000CAD41 /* SembolCollectionViewCell.swift */; };
 		8E5DEA1E29DB6C10000CAD41 /* tabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */; };
+		8E7424E329E58E510062D391 /* DreamSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7424E229E58E510062D391 /* DreamSaveViewController.swift */; };
+		8E7424E729E591970062D391 /* DreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7424E629E591970062D391 /* DreamViewController.swift */; };
 		8E97B4EF29D761D400213549 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4EE29D761D400213549 /* LoginPageViewController.swift */; };
 		8E97B4F129D76AB100213549 /* SecilenMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */; };
 		8E97B4F329D76AC100213549 /* TableViewVeriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */; };
@@ -89,6 +91,8 @@
 		8E5DEA1929DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuyaSembollColletionViewViewController.swift; sourceTree = "<group>"; };
 		8E5DEA1B29DB69A6000CAD41 /* SembolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SembolCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarController.swift; sourceTree = "<group>"; };
+		8E7424E229E58E510062D391 /* DreamSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSaveViewController.swift; sourceTree = "<group>"; };
+		8E7424E629E591970062D391 /* DreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamViewController.swift; sourceTree = "<group>"; };
 		8E97B4EE29D761D400213549 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecilenMenuViewController.swift; sourceTree = "<group>"; };
 		8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVeriViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */,
 				8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */,
 				8E9AA93629DB2A0500AFA0A4 /* YorumlamaViewController.swift */,
+				8E7424E229E58E510062D391 /* DreamSaveViewController.swift */,
+				8E7424E629E591970062D391 /* DreamViewController.swift */,
 				8E5DEA1929DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift */,
 				8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */,
 				8E5DEA1B29DB69A6000CAD41 /* SembolCollectionViewCell.swift */,
@@ -368,8 +374,10 @@
 				8E97B4F129D76AB100213549 /* SecilenMenuViewController.swift in Sources */,
 				8E5DEA1E29DB6C10000CAD41 /* tabbarController.swift in Sources */,
 				8E5DEA1829DB65F1000CAD41 /* RuyaModelleri.swift in Sources */,
+				8E7424E729E591970062D391 /* DreamViewController.swift in Sources */,
 				8E5DEA1629DB65D3000CAD41 /* mydream.xcdatamodeld in Sources */,
 				8E5DEA1A29DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift in Sources */,
+				8E7424E329E58E510062D391 /* DreamSaveViewController.swift in Sources */,
 				8E97B4F329D76AC100213549 /* TableViewVeriViewController.swift in Sources */,
 				8E9AA93729DB2A0500AFA0A4 /* YorumlamaViewController.swift in Sources */,
 				8E5DEA1C29DB69A6000CAD41 /* SembolCollectionViewCell.swift in Sources */,
