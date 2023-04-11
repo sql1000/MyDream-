@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		537A6E5A54E6287CC572E79D /* libPods-myDreamUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAFAC5336204ED7AC9C05DF /* libPods-myDreamUITests.a */; };
+		7FF3F6EA2D6EDD43E937E0A2 /* libPods-myDreamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C81694B74995EA82ACBAB217 /* libPods-myDreamTests.a */; };
 		8E3DA4A329D734DE0022EC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4A229D734DE0022EC31 /* AppDelegate.swift */; };
 		8E3DA4A529D734DE0022EC31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4A429D734DE0022EC31 /* SceneDelegate.swift */; };
 		8E3DA4A729D734DE0022EC31 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4A629D734DE0022EC31 /* RegisterPage.swift */; };
@@ -30,8 +32,6 @@
 		8E97B4F329D76AC100213549 /* TableViewVeriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */; };
 		8E9AA93729DB2A0500AFA0A4 /* YorumlamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9AA93629DB2A0500AFA0A4 /* YorumlamaViewController.swift */; };
 		AAD1B9B9714EC96BFE6FD1D9 /* Pods_myDream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F963111EB80339BEEA4CBFFD /* Pods_myDream.framework */; };
-		B64C3E8388ED076852820967 /* Pods_myDreamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AB9D8DD40EDFADD2B82455 /* Pods_myDreamTests.framework */; };
-		D533463FE43DE48C1446C605 /* Pods_myDream_myDreamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AF6BD7C2859F406F047ABD /* Pods_myDream_myDreamUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +53,9 @@
 
 /* Begin PBXFileReference section */
 		0077044E87621B5F99654171 /* Pods-myDream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDream.debug.xcconfig"; path = "Target Support Files/Pods-myDream/Pods-myDream.debug.xcconfig"; sourceTree = "<group>"; };
-		17AB9D8DD40EDFADD2B82455 /* Pods_myDreamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myDreamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18AF6BD7C2859F406F047ABD /* Pods_myDream_myDreamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myDream_myDreamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1660F7E0FCD67C77971DEB84 /* Pods-myDreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-myDreamUITests/Pods-myDreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		38026D2E578A3454E9A76A09 /* Pods-myDreamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDreamTests.release.xcconfig"; path = "Target Support Files/Pods-myDreamTests/Pods-myDreamTests.release.xcconfig"; sourceTree = "<group>"; };
+		3CAFAC5336204ED7AC9C05DF /* libPods-myDreamUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myDreamUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3DA49F29D734DE0022EC31 /* myDream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myDream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3DA4A229D734DE0022EC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E3DA4A429D734DE0022EC31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +103,8 @@
 		9EE59B59430C1F8B3DE69407 /* Pods-myDreamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDreamTests.debug.xcconfig"; path = "Target Support Files/Pods-myDreamTests/Pods-myDreamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C06D9515F4277E7F611D4F7D /* Pods-myDream-myDreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDream-myDreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-myDream-myDreamUITests/Pods-myDream-myDreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C455F48746594337C6D918BE /* Pods-myDream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDream.release.xcconfig"; path = "Target Support Files/Pods-myDream/Pods-myDream.release.xcconfig"; sourceTree = "<group>"; };
+		C81694B74995EA82ACBAB217 /* libPods-myDreamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myDreamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB4428473739EBA7905958B1 /* Pods-myDreamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDreamUITests.release.xcconfig"; path = "Target Support Files/Pods-myDreamUITests/Pods-myDreamUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EDAA2E95B5233AF83190CEEE /* Pods-myDream-myDreamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDream-myDreamUITests.release.xcconfig"; path = "Target Support Files/Pods-myDream-myDreamUITests/Pods-myDream-myDreamUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F963111EB80339BEEA4CBFFD /* Pods_myDream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myDream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B64C3E8388ED076852820967 /* Pods_myDreamTests.framework in Frameworks */,
+				7FF3F6EA2D6EDD43E937E0A2 /* libPods-myDreamTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D533463FE43DE48C1446C605 /* Pods_myDream_myDreamUITests.framework in Frameworks */,
+				537A6E5A54E6287CC572E79D /* libPods-myDreamUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				F963111EB80339BEEA4CBFFD /* Pods_myDream.framework */,
-				18AF6BD7C2859F406F047ABD /* Pods_myDream_myDreamUITests.framework */,
-				17AB9D8DD40EDFADD2B82455 /* Pods_myDreamTests.framework */,
+				C81694B74995EA82ACBAB217 /* libPods-myDreamTests.a */,
+				3CAFAC5336204ED7AC9C05DF /* libPods-myDreamUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -254,6 +256,8 @@
 				EDAA2E95B5233AF83190CEEE /* Pods-myDream-myDreamUITests.release.xcconfig */,
 				9EE59B59430C1F8B3DE69407 /* Pods-myDreamTests.debug.xcconfig */,
 				38026D2E578A3454E9A76A09 /* Pods-myDreamTests.release.xcconfig */,
+				1660F7E0FCD67C77971DEB84 /* Pods-myDreamUITests.debug.xcconfig */,
+				CB4428473739EBA7905958B1 /* Pods-myDreamUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -307,7 +311,6 @@
 				8E3DA4BB29D734E00022EC31 /* Sources */,
 				8E3DA4BC29D734E00022EC31 /* Frameworks */,
 				8E3DA4BD29D734E00022EC31 /* Resources */,
-				09378CCF49C0F366DFCCDB8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -391,23 +394,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09378CCF49C0F366DFCCDB8B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-myDream-myDreamUITests/Pods-myDream-myDreamUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-myDream-myDreamUITests/Pods-myDream-myDreamUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myDream-myDreamUITests/Pods-myDream-myDreamUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6CB88612D085BA47F39D1A41 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,7 +426,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-myDream-myDreamUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-myDreamUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -690,7 +676,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CFBPBU763M;
+				DEVELOPMENT_TEAM = TFALV8UYMA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myDream/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "My Dream";
@@ -704,7 +690,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sengun.myDream;
+				PRODUCT_BUNDLE_IDENTIFIER = sengun.myDreams;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -718,9 +704,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CFBPBU763M;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myDream/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "My Dream";
@@ -736,6 +722,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sengun.myDream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -786,7 +773,7 @@
 		};
 		8E3DA4D029D734E00022EC31 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C06D9515F4277E7F611D4F7D /* Pods-myDream-myDreamUITests.debug.xcconfig */;
+			baseConfigurationReference = 1660F7E0FCD67C77971DEB84 /* Pods-myDreamUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -805,7 +792,7 @@
 		};
 		8E3DA4D129D734E00022EC31 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDAA2E95B5233AF83190CEEE /* Pods-myDream-myDreamUITests.release.xcconfig */;
+			baseConfigurationReference = CB4428473739EBA7905958B1 /* Pods-myDreamUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
