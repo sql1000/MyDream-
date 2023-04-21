@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		537A6E5A54E6287CC572E79D /* libPods-myDreamUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAFAC5336204ED7AC9C05DF /* libPods-myDreamUITests.a */; };
 		7FF3F6EA2D6EDD43E937E0A2 /* libPods-myDreamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C81694B74995EA82ACBAB217 /* libPods-myDreamTests.a */; };
+		8E2AF5B929EAE44D00D0751F /* RuyaAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AF5B829EAE44D00D0751F /* RuyaAddViewController.swift */; };
 		8E3DA4A329D734DE0022EC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4A229D734DE0022EC31 /* AppDelegate.swift */; };
 		8E3DA4A529D734DE0022EC31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4A429D734DE0022EC31 /* SceneDelegate.swift */; };
 		8E3DA4A729D734DE0022EC31 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4A629D734DE0022EC31 /* RegisterPage.swift */; };
@@ -19,18 +20,19 @@
 		8E3DA4C429D734E00022EC31 /* myDreamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4C329D734E00022EC31 /* myDreamUITests.swift */; };
 		8E3DA4C629D734E00022EC31 /* myDreamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4C529D734E00022EC31 /* myDreamUITestsLaunchTests.swift */; };
 		8E3DA4D329D735300022EC31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E3DA4D229D735300022EC31 /* GoogleService-Info.plist */; };
+		8E50C28929EFC4EE00806F00 /* dreamSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50C28829EFC4EE00806F00 /* dreamSave.swift */; };
+		8E50C28B29EFC57C00806F00 /* recordedDreams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50C28A29EFC57C00806F00 /* recordedDreams.swift */; };
 		8E5DEA1329DB632F000CAD41 /* ProfilimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1229DB632F000CAD41 /* ProfilimViewController.swift */; };
-		8E5DEA1629DB65D3000CAD41 /* mydream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1429DB65D3000CAD41 /* mydream.xcdatamodeld */; };
+		8E5DEA1629DB65D3000CAD41 /* myDream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1429DB65D3000CAD41 /* myDream.xcdatamodeld */; };
 		8E5DEA1829DB65F1000CAD41 /* RuyaModelleri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */; };
-		8E5DEA1A29DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1929DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift */; };
-		8E5DEA1C29DB69A6000CAD41 /* SembolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1B29DB69A6000CAD41 /* SembolCollectionViewCell.swift */; };
 		8E5DEA1E29DB6C10000CAD41 /* tabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */; };
 		8E7424E329E58E510062D391 /* DreamSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7424E229E58E510062D391 /* DreamSaveViewController.swift */; };
-		8E7424E729E591970062D391 /* DreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7424E629E591970062D391 /* DreamViewController.swift */; };
 		8E97B4EF29D761D400213549 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4EE29D761D400213549 /* LoginPageViewController.swift */; };
 		8E97B4F129D76AB100213549 /* SecilenMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */; };
 		8E97B4F329D76AC100213549 /* TableViewVeriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */; };
 		8E9AA93729DB2A0500AFA0A4 /* YorumlamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9AA93629DB2A0500AFA0A4 /* YorumlamaViewController.swift */; };
+		8ED079C729F32C6800BA5FCA /* RuyaSembollColletionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED079C629F32C6800BA5FCA /* RuyaSembollColletionViewViewController.swift */; };
+		8ED079C929F330FD00BA5FCA /* SembolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED079C829F330FD00BA5FCA /* SembolCollectionViewCell.swift */; };
 		AAD1B9B9714EC96BFE6FD1D9 /* Pods_myDream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F963111EB80339BEEA4CBFFD /* Pods_myDream.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,7 @@
 		1660F7E0FCD67C77971DEB84 /* Pods-myDreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-myDreamUITests/Pods-myDreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		38026D2E578A3454E9A76A09 /* Pods-myDreamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDreamTests.release.xcconfig"; path = "Target Support Files/Pods-myDreamTests/Pods-myDreamTests.release.xcconfig"; sourceTree = "<group>"; };
 		3CAFAC5336204ED7AC9C05DF /* libPods-myDreamUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myDreamUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E2AF5B829EAE44D00D0751F /* RuyaAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuyaAddViewController.swift; sourceTree = "<group>"; };
 		8E3DA49F29D734DE0022EC31 /* myDream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myDream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3DA4A229D734DE0022EC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E3DA4A429D734DE0022EC31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,18 +91,19 @@
 		8E3DA4ED29D7399F0022EC31 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "Poppins/Poppins-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		8E3DA4EE29D7399F0022EC31 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "Poppins/Poppins-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		8E3DA4EF29D7399F0022EC31 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBoldItalic.ttf"; path = "Poppins/Poppins-SemiBoldItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		8E50C28829EFC4EE00806F00 /* dreamSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dreamSave.swift; sourceTree = "<group>"; };
+		8E50C28A29EFC57C00806F00 /* recordedDreams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recordedDreams.swift; sourceTree = "<group>"; };
 		8E5DEA1229DB632F000CAD41 /* ProfilimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilimViewController.swift; sourceTree = "<group>"; };
-		8E5DEA1529DB65D3000CAD41 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		8E5DEA1529DB65D3000CAD41 /* myDream.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myDream.xcdatamodel; sourceTree = "<group>"; };
 		8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuyaModelleri.swift; sourceTree = "<group>"; };
-		8E5DEA1929DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuyaSembollColletionViewViewController.swift; sourceTree = "<group>"; };
-		8E5DEA1B29DB69A6000CAD41 /* SembolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SembolCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarController.swift; sourceTree = "<group>"; };
 		8E7424E229E58E510062D391 /* DreamSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSaveViewController.swift; sourceTree = "<group>"; };
-		8E7424E629E591970062D391 /* DreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamViewController.swift; sourceTree = "<group>"; };
 		8E97B4EE29D761D400213549 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecilenMenuViewController.swift; sourceTree = "<group>"; };
 		8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVeriViewController.swift; sourceTree = "<group>"; };
 		8E9AA93629DB2A0500AFA0A4 /* YorumlamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YorumlamaViewController.swift; sourceTree = "<group>"; };
+		8ED079C629F32C6800BA5FCA /* RuyaSembollColletionViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuyaSembollColletionViewViewController.swift; path = tabbar/RuyaSembollColletionViewViewController.swift; sourceTree = "<group>"; };
+		8ED079C829F330FD00BA5FCA /* SembolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SembolCollectionViewCell.swift; sourceTree = "<group>"; };
 		9EE59B59430C1F8B3DE69407 /* Pods-myDreamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDreamTests.debug.xcconfig"; path = "Target Support Files/Pods-myDreamTests/Pods-myDreamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C06D9515F4277E7F611D4F7D /* Pods-myDream-myDreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDream-myDreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-myDream-myDreamUITests/Pods-myDream-myDreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C455F48746594337C6D918BE /* Pods-myDream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDream.release.xcconfig"; path = "Target Support Files/Pods-myDream/Pods-myDream.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,22 +179,21 @@
 				8E3DA4A229D734DE0022EC31 /* AppDelegate.swift */,
 				8E3DA4A429D734DE0022EC31 /* SceneDelegate.swift */,
 				8E97B4ED29D7619300213549 /* Login Page */,
-				8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */,
 				8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */,
 				8E9AA93629DB2A0500AFA0A4 /* YorumlamaViewController.swift */,
+				8EC8E08729EDFC9A0021305A /* AAnaSayfa */,
 				8E7424E229E58E510062D391 /* DreamSaveViewController.swift */,
-				8E7424E629E591970062D391 /* DreamViewController.swift */,
-				8E5DEA1929DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift */,
-				8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */,
-				8E5DEA1B29DB69A6000CAD41 /* SembolCollectionViewCell.swift */,
-				8E5DEA1229DB632F000CAD41 /* ProfilimViewController.swift */,
-				8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */,
+				8ED079C629F32C6800BA5FCA /* RuyaSembollColletionViewViewController.swift */,
+				8E50C28729EFC31400806F00 /* YeniRüyaKaydet */,
+				8EC8E08929EDFD420021305A /* rüyakaydetme */,
 				8E3DA4A829D734DE0022EC31 /* Main.storyboard */,
+				8ED079C829F330FD00BA5FCA /* SembolCollectionViewCell.swift */,
 				8E3DA4AB29D734E00022EC31 /* Assets.xcassets */,
 				8E3DA4DD29D7396B0022EC31 /* Fonts */,
 				8E3DA4AD29D734E00022EC31 /* LaunchScreen.storyboard */,
 				8E3DA4B029D734E00022EC31 /* Info.plist */,
 				8E3DA4D229D735300022EC31 /* GoogleService-Info.plist */,
+				8E5DEA1429DB65D3000CAD41 /* myDream.xcdatamodeld */,
 			);
 			path = myDream;
 			sourceTree = "<group>";
@@ -206,7 +209,6 @@
 		8E3DA4C229D734E00022EC31 /* myDreamUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8E5DEA1429DB65D3000CAD41 /* mydream.xcdatamodeld */,
 				8E3DA4C329D734E00022EC31 /* myDreamUITests.swift */,
 				8E3DA4C529D734E00022EC31 /* myDreamUITestsLaunchTests.swift */,
 			);
@@ -238,6 +240,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		8E50C28729EFC31400806F00 /* YeniRüyaKaydet */ = {
+			isa = PBXGroup;
+			children = (
+				8E50C28829EFC4EE00806F00 /* dreamSave.swift */,
+				8E50C28A29EFC57C00806F00 /* recordedDreams.swift */,
+			);
+			name = "YeniRüyaKaydet";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		8E97B4ED29D7619300213549 /* Login Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +257,27 @@
 				8E97B4EE29D761D400213549 /* LoginPageViewController.swift */,
 			);
 			path = "Login Page";
+			sourceTree = "<group>";
+		};
+		8EC8E08729EDFC9A0021305A /* AAnaSayfa */ = {
+			isa = PBXGroup;
+			children = (
+				8E5DEA1229DB632F000CAD41 /* ProfilimViewController.swift */,
+				8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */,
+				8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */,
+			);
+			name = AAnaSayfa;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8EC8E08929EDFD420021305A /* rüyakaydetme */ = {
+			isa = PBXGroup;
+			children = (
+				8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */,
+				8E2AF5B829EAE44D00D0751F /* RuyaAddViewController.swift */,
+			);
+			name = "rüyakaydetme";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B51D3AD9CD8E169E4C37F8D7 /* Pods */ = {
@@ -484,21 +517,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED079C929F330FD00BA5FCA /* SembolCollectionViewCell.swift in Sources */,
 				8E5DEA1329DB632F000CAD41 /* ProfilimViewController.swift in Sources */,
 				8E3DA4A729D734DE0022EC31 /* RegisterPage.swift in Sources */,
 				8E97B4EF29D761D400213549 /* LoginPageViewController.swift in Sources */,
 				8E3DA4A329D734DE0022EC31 /* AppDelegate.swift in Sources */,
 				8E97B4F129D76AB100213549 /* SecilenMenuViewController.swift in Sources */,
 				8E5DEA1E29DB6C10000CAD41 /* tabbarController.swift in Sources */,
+				8E50C28929EFC4EE00806F00 /* dreamSave.swift in Sources */,
 				8E5DEA1829DB65F1000CAD41 /* RuyaModelleri.swift in Sources */,
-				8E7424E729E591970062D391 /* DreamViewController.swift in Sources */,
-				8E5DEA1629DB65D3000CAD41 /* mydream.xcdatamodeld in Sources */,
-				8E5DEA1A29DB66F1000CAD41 /* RuyaSembollColletionViewViewController.swift in Sources */,
+				8E5DEA1629DB65D3000CAD41 /* myDream.xcdatamodeld in Sources */,
+				8ED079C729F32C6800BA5FCA /* RuyaSembollColletionViewViewController.swift in Sources */,
 				8E7424E329E58E510062D391 /* DreamSaveViewController.swift in Sources */,
 				8E97B4F329D76AC100213549 /* TableViewVeriViewController.swift in Sources */,
+				8E50C28B29EFC57C00806F00 /* recordedDreams.swift in Sources */,
 				8E9AA93729DB2A0500AFA0A4 /* YorumlamaViewController.swift in Sources */,
-				8E5DEA1C29DB69A6000CAD41 /* SembolCollectionViewCell.swift in Sources */,
 				8E3DA4A529D734DE0022EC31 /* SceneDelegate.swift in Sources */,
+				8E2AF5B929EAE44D00D0751F /* RuyaAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,13 +886,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8E5DEA1429DB65D3000CAD41 /* mydream.xcdatamodeld */ = {
+		8E5DEA1429DB65D3000CAD41 /* myDream.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8E5DEA1529DB65D3000CAD41 /* Model.xcdatamodel */,
+				8E5DEA1529DB65D3000CAD41 /* myDream.xcdatamodel */,
 			);
-			currentVersion = 8E5DEA1529DB65D3000CAD41 /* Model.xcdatamodel */;
-			path = mydream.xcdatamodeld;
+			currentVersion = 8E5DEA1529DB65D3000CAD41 /* myDream.xcdatamodel */;
+			path = myDream.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

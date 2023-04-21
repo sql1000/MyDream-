@@ -38,8 +38,18 @@ class LoginPageViewController: UIViewController {
                if UserDefaults.standard.bool(forKey: "rememberMe") && Auth.auth().currentUser != nil {
                    self.performSegue(withIdentifier: "anaSayfa", sender: nil)
                }
+        //KLAVYE GİZLEME
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecognizer)
            
     }
+    // KLAVYE GİZLEME
+    @objc func hideKeyboard(){
+        view.endEditing(false)
+    }
+    
+  
+    
     
     
     @IBAction func loginPageLoginButton(_ sender: Any) {

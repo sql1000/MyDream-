@@ -25,8 +25,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         loading.isHidden = true
         
+        //KLAVYE GİZLEME
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecognizer)
         
 
+    }
+    //KLAVYE GİZLEME
+    @objc func hideKeyboard(){
+        view.endEditing(false)
     }
     
     @IBAction func registerButton(_ sender: Any) {
