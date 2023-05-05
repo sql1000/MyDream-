@@ -23,6 +23,8 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     @IBOutlet var tarihText: UITextField!
     
     @IBOutlet var duyguText: UITextField!
+    
+    
     var datePicer : UIDatePicker?
 
     
@@ -53,7 +55,7 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
             kaydetButton.isHidden = true
             
             //coredata
-            
+            //HSATIR BOLM BEEE 
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
             
