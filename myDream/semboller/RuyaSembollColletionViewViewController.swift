@@ -98,26 +98,31 @@ extension RuyaSembollColletionViewViewController: UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // indexine daha kolay eriselim diye indexPath.row kullandik
         let sembol1 = sembol[indexPath.row]
-        let gelenveri = sembol[indexPath.row]
+
 
         
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sembol", for: indexPath) as! SembolCollectionViewCell
-        cell.sembolIsim.text = sembol1.sembolisim
-        if let resim = sembol1.sembolResim{
-            cell.sembolResim.image = UIImage(named: resim)
-        }
+        if aramaYapiliyorMu {
+               cell.sembolIsim.text = aramaSonucuSembol[indexPath.row]
+               if let index = sembol.firstIndex(where: { $0.sembolisim == aramaSonucuSembol[indexPath.row] }),
+                  let resim = sembol[index].sembolResim {
+                   cell.sembolResim.image = UIImage(named: resim)
+               }
+           } else {
+               cell.sembolIsim.text = sembol1.sembolisim
+               if let resim = sembol1.sembolResim {
+                   cell.sembolResim.image = UIImage(named: resim)
+               }
+           }
+        
+        
+        
+        
         
         // Hucreye cerceve eklemek.
         cell.layer.borderColor = UIColor.darkGray.cgColor
         cell.layer.borderWidth = 2
         cell.layer.cornerRadius = 8
-        
-        if aramaYapiliyorMu {
-            cell.sembolIsim.text = aramaSonucuSembol[indexPath.row]
-        }else{
-            cell.sembolIsim.text = gelenveri.sembolisim
-        }
         
         return cell
         
