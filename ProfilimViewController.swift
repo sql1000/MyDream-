@@ -10,10 +10,12 @@ import Firebase
 import FirebaseAuth
 
 class ProfilimViewController: UIViewController {
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Profil Seçenekleri"
+        configrue()
         //kopya lsdfdnnsndjng
         guard (Auth.auth().currentUser?.email) != nil else {
                     // Kullanıcı giriş yapmamışsa ya da email adresi kayıtlı değilse nil döndür
@@ -81,6 +83,16 @@ class ProfilimViewController: UIViewController {
         uyari.addAction(cikisButton)
         
         self.present(uyari, animated: true)
+    }
+    
+    
+    
+    func configrue(){
+        visualEffectView.layer.cornerRadius = 20
+        visualEffectView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        visualEffectView.clipsToBounds = true
+    
+        
     }
     
 }

@@ -115,9 +115,9 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(gestureRecognizer)
         
-        imageView.isUserInteractionEnabled = true
+        //imageView.isUserInteractionEnabled = true
         let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectimage))
-        imageView.addGestureRecognizer(imageTapRecognizer)
+        //imageView.addGestureRecognizer(imageTapRecognizer)
         
         /*ruyaTextView.isUserInteractionEnabled = true
         let ruyaTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectimage))
@@ -194,9 +194,9 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         
         newDream.setValue(UUID(), forKey: "id")
         
-        let data = imageView.image!.jpegData(compressionQuality: 0.5)
+       // let data = imageView.image!.jpegData(compressionQuality: 0.5)
         
-        newDream.setValue(data, forKey: "image")
+        //newDream.setValue(data, forKey: "image")
         
         
         do {
