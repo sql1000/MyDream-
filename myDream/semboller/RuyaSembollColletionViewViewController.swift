@@ -16,7 +16,8 @@ class RuyaSembollColletionViewViewController: UIViewController {
             print("Veri geldi")
         }
     }
-
+    var aramaSonucuSembol:[String] = [String]()
+    var aramaYapiliyorMu = false
     @IBOutlet var collectionViewSembol: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,12 +86,20 @@ extension RuyaSembollColletionViewViewController: UICollectionViewDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // Sembol arrayinin uzunlugunu aldik. Geri gonderdi
-        return sembol.count
+        
+        
+        if aramaYapiliyorMu == true{
+            return aramaSonucuSembol.count
+        }else{
+            return sembol.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // indexine daha kolay eriselim diye indexPath.row kullandik
         let sembol1 = sembol[indexPath.row]
+        let gelenveri = sembol[indexPath.row]
+
         
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sembol", for: indexPath) as! SembolCollectionViewCell
@@ -104,17 +113,37 @@ extension RuyaSembollColletionViewViewController: UICollectionViewDelegate, UICo
         cell.layer.borderWidth = 2
         cell.layer.cornerRadius = 8
         
+        if aramaYapiliyorMu {
+            cell.sembolIsim.text = aramaSonucuSembol[indexPath.row]
+        }else{
+            cell.sembolIsim.text = gelenveri.sembolisim
+        }
+        
         return cell
         
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let sembol1 = sembol[indexPath.row]
-        let alert = UIAlertController(title: sembol1.sembolisim, message: sembol1.sembolAnlami!, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "OK", style: .cancel)
-        alert.addAction(ok)
+       
+        
+        var gelenveri: RuyaSembol
+        if aramaYapiliyorMu {
+            let sembolAdi = aramaSonucuSembol[indexPath.row]
+            gelenveri = sembol.first(where: { $0.sembolisim == sembolAdi })!
+        } else {
+            gelenveri = sembol[indexPath.row]
+        }
+        
+        let alert = UIAlertController(title: gelenveri.sembolisim!, message: gelenveri.sembolAnlami!, preferredStyle: .alert)
+        let button = UIAlertAction(title: "okey", style: .default)
+        
+        alert.addAction(button)
+        
         self.present(alert, animated: true)
+        
+       
+        
     }
     
     
@@ -123,15 +152,19 @@ extension RuyaSembollColletionViewViewController: UICollectionViewDelegate, UICo
 }
 
 
-extension RuyaSembollColletionViewViewController: UISearchBarDelegate{
+extension RuyaSembollColletionViewViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText != ""{
-            let alert = UIAlertController(title: "Hata", message: "Sembol Anlamları Arama Çubuğu şuan çalışmıyor, Çok Yakında aktif olacak..", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "Tamam", style: .cancel) { UIAlertAction in
-                self.hideKeyboard()
-            }
-            alert.addAction(ok)
-            self.present(alert, animated: true)
+        print("Arama sonucu \(searchText)")
+        
+        if searchText == "" { // Arama yapilmiyor
+            aramaYapiliyorMu = false
+        } else {
+            aramaYapiliyorMu = true
+            
+            let filteredSembol = sembol.filter { $0.sembolisim!.lowercased().contains(searchText.lowercased()) }
+            aramaSonucuSembol = filteredSembol.map { $0.sembolisim! }
         }
+        
+        collectionViewSembol.reloadData()
     }
 }
