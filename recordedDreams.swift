@@ -21,7 +21,9 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var tableView: UITableView!
     
     var baslikArray = [String]()
+    var ruyaArray = [String]()
     var idArray = [UUID]()
+    
     
     var selectedDreams = ""
     var selectedDreamsId : UUID?
@@ -79,7 +81,7 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     
     @objc func getData() {
-        
+        ruyaArray.removeAll(keepingCapacity: false)
         baslikArray.removeAll(keepingCapacity: false)
         idArray.removeAll(keepingCapacity: false)
         
@@ -98,6 +100,10 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
                 for result in results as! [NSManagedObject] {
                     if let baslik = result.value(forKey: "baslik") as? String{
                         self.baslikArray.append(baslik)
+                    }
+                    
+                    if let ruya = result.value(forKey: "ruya") as? String{
+                        self.ruyaArray.append(ruya)
                     }
                     
                     if let id = result.value(forKey: "id") as? UUID{
@@ -120,6 +126,10 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return baslikArray.count
+    }
+    ///
+    func ruyaTextView(_ ruyaTextView: UITextView, numberOfRowsInSection section: Int) -> Int {
+        return ruyaArray.count
     }
     
     
@@ -145,6 +155,7 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedDreams = baslikArray[indexPath.row]
+        /*selectedDreams = ruyaArray[indexPath.row]*/
         selectedDreamsId = idArray[indexPath.row]
         performSegue(withIdentifier: "dreamSave", sender: nil)
     }
@@ -177,6 +188,7 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
                                 context.delete(result)
                                 
                                 baslikArray.remove(at: indexPath.row)
+                                /*ruyaArray.remove(at: indexPath.row)*/
                                 
                                 idArray.remove(at: indexPath.row)
                                 

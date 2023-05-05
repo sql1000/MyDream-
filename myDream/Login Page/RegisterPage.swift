@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var registerEmailTextField: UITextField!
     
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var registerPasswordTextfield: UITextField!
     
     
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         loading.isHidden = true
         
+        imageView.image = UIImage.gif(asset: "giris3")
+
         //KLAVYE GİZLEME
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(gestureRecognizer)

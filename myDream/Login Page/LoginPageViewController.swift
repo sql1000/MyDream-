@@ -13,6 +13,7 @@ class LoginPageViewController: UIViewController {
     @IBOutlet weak var rememberMe: UISwitch!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var loginPageEmailTextField: UITextField!
     
     @IBOutlet weak var loginPagePasswordTextField: UITextField!
@@ -29,6 +30,7 @@ class LoginPageViewController: UIViewController {
             )
         navigationItem.backBarButtonItem?.tintColor = .red
         
+        imageView.image = UIImage.gif(asset: "giris2")
         navigationItem.title = "Login"
         loading.isHidden = true
         //navigationController?.isNavigationBarHidden = true
@@ -64,7 +66,7 @@ class LoginPageViewController: UIViewController {
         if email == "admin" && password == "371626"{
             self.performSegue(withIdentifier: "", sender: nil)
         }
-        
+//
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
                 print("Giriş işlemi başarısız: \(error.localizedDescription)")

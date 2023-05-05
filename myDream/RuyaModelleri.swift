@@ -27,3 +27,22 @@ class RuyaSembol{
     
     
 }
+
+class RuyaSembolAnlam{
+    
+    var sembolID: Int?
+    var sembolisim:String?
+    var sembolAnlami:String?
+    
+    init(){
+        
+    }
+    
+    
+    init(sembolisim: String?, sembolAnlami: String?,sembolID: Int?) {
+        self.sembolID = sembolID
+        self.sembolisim = sembolisim
+        self.sembolAnlami = sembolAnlami
+    }
+    
+}

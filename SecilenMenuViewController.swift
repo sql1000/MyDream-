@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import FirebaseDatabase
+
 
 class SecilenMenuViewController: UIViewController {
     // RuyaSembol sinifindan array olusturudk
     var sembollerListesi:[RuyaSembol] = [RuyaSembol]()
     
+    @IBOutlet var imageView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -22,8 +25,11 @@ class SecilenMenuViewController: UIViewController {
             target: nil,
             action: nil
         )
-        navigationItem.backBarButtonItem?.tintColor = .red
+        navigationItem.backBarButtonItem?.tintColor = .systemBlue
         self.navigationItem.setHidesBackButton(true, animated: true)
+        
+        
+        
         
         // Sinifizdan Objeler olusturduk.
         let sembol1 = RuyaSembol(sembolResim: "at", sembolisim: "At", sembolAnlami: "Arzuları, dilekleri ve ümit edilerek beklenen şeyleri simgeler.")
@@ -68,7 +74,11 @@ class SecilenMenuViewController: UIViewController {
         let sembol40 = RuyaSembol(sembolResim: "ankakuş", sembolisim: "Anka Kuşu", sembolAnlami: "Yeniden doğuşu simgeler. Hayatınızda bir şey sizin için önemini yitirmişse onu ankaya çevirin.Fakat anka enerjisi önce yanmayı gerektirdiği için sağlıklı giden bir şeyi ankaya çevirmeyin ve ona anka enerjisi yüklemeyin.")
         let sembol41 = RuyaSembol(sembolResim: "anne", sembolisim: "Anne", sembolAnlami: "Rüyayı gören kadın ise; kişinin anneliğini ve anne ile ilgili bilinçaltı kayıtlarını simgeler. Fakat anne tarafından gelen kayıtları da ifade edebilir. Rüyayı gören erkek ise; anne ile ilgili bilinçaltı kayıtlarını ve eşi ile ilgili yapılanmasını ifade eder. Erkek için eş, sevgili, dişil güç, anne kayıtları ile ilgilidir.")
         let sembol42 = RuyaSembol(sembolResim: "anten", sembolisim: "Anten", sembolAnlami: "Duru işiti ve duru görü ile kurulan iletişimi simgeler. Beş duyu organının yardımı olmadan olayları veya durumları algılayabilmeyi ifade eder.")
-       
+        let sembol43 = RuyaSembol(sembolResim: "", sembolisim: "Abiye Elbise", sembolAnlami: "Bir olayın veya durumun mutlu sonuçlanmasından dolayı yapılan kutlamayı simgeler.")
+        let sembol44 = RuyaSembol(sembolResim: "", sembolisim: "Ab-ı Hayat", sembolAnlami: "İlimi simgeler..")
+        let sembol45 = RuyaSembol(sembolResim: "", sembolisim: "Adak", sembolAnlami: "Bir dileğin gerçekleşmesi için adanan şeyleri simgeler. Fakat bu rüyayı gören kişi, dileğinin gerçekleşmesini beklemeden rüyada adadığı şeyi hemen yerine getirmelidir.")
+        let sembol46 = RuyaSembol(sembolResim: "", sembolisim: "Regl(Adet Kanı)", sembolAnlami: "Dişilikle ilgili şeyleri simgeler.")
+        let sembol47 = RuyaSembol(sembolResim: "", sembolisim: "Ab-ı Hayat Suyu İçmek", sembolAnlami: "İlim almayı ya da ilim alınacağını simgeler.")
         
         sembollerListesi.append(sembol1)
         sembollerListesi.append(sembol2)
@@ -112,9 +122,16 @@ class SecilenMenuViewController: UIViewController {
         sembollerListesi.append(sembol40)
         sembollerListesi.append(sembol41)
         sembollerListesi.append(sembol42)
+        sembollerListesi.append(sembol43)
+        sembollerListesi.append(sembol44)
+        sembollerListesi.append(sembol45)
+        sembollerListesi.append(sembol46)
+        sembollerListesi.append(sembol47)
+
+
         
         
-        
+       // imageView.image = UIImage.gif(asset: "giris1")
         
         
         
@@ -123,12 +140,17 @@ class SecilenMenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ruya" {
             let destination = segue.destination as! tabbarController
+            let destination0 = destination.viewControllers![0] as! SembolAramaViewController
             let destination1 = destination.viewControllers![1] as! RuyaSembollColletionViewViewController
+            
             if let veri = sender as? [RuyaSembol] {
+                destination0.sembol = veri  
                 destination1.sembol = veri
             }
         }
     }
+    
+  
 
     
     

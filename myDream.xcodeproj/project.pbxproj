@@ -26,13 +26,15 @@
 		8E5DEA1629DB65D3000CAD41 /* myDream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1429DB65D3000CAD41 /* myDream.xcdatamodeld */; };
 		8E5DEA1829DB65F1000CAD41 /* RuyaModelleri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */; };
 		8E5DEA1E29DB6C10000CAD41 /* tabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */; };
+		8E676A272A04222200CDE8F9 /* LauchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E676A262A04222200CDE8F9 /* LauchScreenViewController.swift */; };
 		8E7424E329E58E510062D391 /* DreamSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7424E229E58E510062D391 /* DreamSaveViewController.swift */; };
 		8E97B4EF29D761D400213549 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4EE29D761D400213549 /* LoginPageViewController.swift */; };
 		8E97B4F129D76AB100213549 /* SecilenMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */; };
 		8E97B4F329D76AC100213549 /* TableViewVeriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */; };
-		8E9AA93729DB2A0500AFA0A4 /* YorumlamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9AA93629DB2A0500AFA0A4 /* YorumlamaViewController.swift */; };
 		8ED079C729F32C6800BA5FCA /* RuyaSembollColletionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED079C629F32C6800BA5FCA /* RuyaSembollColletionViewViewController.swift */; };
 		8ED079C929F330FD00BA5FCA /* SembolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED079C829F330FD00BA5FCA /* SembolCollectionViewCell.swift */; };
+		8ED079CB29F336AF00BA5FCA /* SembolAramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED079CA29F336AF00BA5FCA /* SembolAramaViewController.swift */; };
+		8EF7A22E29F3FEA700318615 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7A22D29F3FEA700318615 /* UIImageExt.swift */; };
 		AAD1B9B9714EC96BFE6FD1D9 /* Pods_myDream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F963111EB80339BEEA4CBFFD /* Pods_myDream.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,13 +99,15 @@
 		8E5DEA1529DB65D3000CAD41 /* myDream.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myDream.xcdatamodel; sourceTree = "<group>"; };
 		8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuyaModelleri.swift; sourceTree = "<group>"; };
 		8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarController.swift; sourceTree = "<group>"; };
+		8E676A262A04222200CDE8F9 /* LauchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchScreenViewController.swift; sourceTree = "<group>"; };
 		8E7424E229E58E510062D391 /* DreamSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSaveViewController.swift; sourceTree = "<group>"; };
 		8E97B4EE29D761D400213549 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		8E97B4F029D76AB100213549 /* SecilenMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecilenMenuViewController.swift; sourceTree = "<group>"; };
 		8E97B4F229D76AC100213549 /* TableViewVeriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVeriViewController.swift; sourceTree = "<group>"; };
-		8E9AA93629DB2A0500AFA0A4 /* YorumlamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YorumlamaViewController.swift; sourceTree = "<group>"; };
-		8ED079C629F32C6800BA5FCA /* RuyaSembollColletionViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuyaSembollColletionViewViewController.swift; path = tabbar/RuyaSembollColletionViewViewController.swift; sourceTree = "<group>"; };
+		8ED079C629F32C6800BA5FCA /* RuyaSembollColletionViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuyaSembollColletionViewViewController.swift; sourceTree = "<group>"; };
 		8ED079C829F330FD00BA5FCA /* SembolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SembolCollectionViewCell.swift; sourceTree = "<group>"; };
+		8ED079CA29F336AF00BA5FCA /* SembolAramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SembolAramaViewController.swift; sourceTree = "<group>"; };
+		8EF7A22D29F3FEA700318615 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		9EE59B59430C1F8B3DE69407 /* Pods-myDreamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDreamTests.debug.xcconfig"; path = "Target Support Files/Pods-myDreamTests/Pods-myDreamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C06D9515F4277E7F611D4F7D /* Pods-myDream-myDreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDream-myDreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-myDream-myDreamUITests/Pods-myDream-myDreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C455F48746594337C6D918BE /* Pods-myDream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDream.release.xcconfig"; path = "Target Support Files/Pods-myDream/Pods-myDream.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +155,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E3C04562A02E43900156AAB /* semboller */ = {
+			isa = PBXGroup;
+			children = (
+				8ED079C829F330FD00BA5FCA /* SembolCollectionViewCell.swift */,
+				8ED079CA29F336AF00BA5FCA /* SembolAramaViewController.swift */,
+				8ED079C629F32C6800BA5FCA /* RuyaSembollColletionViewViewController.swift */,
+			);
+			path = semboller;
+			sourceTree = "<group>";
+		};
 		8E3DA49629D734DE0022EC31 = {
 			isa = PBXGroup;
 			children = (
@@ -177,17 +191,17 @@
 			isa = PBXGroup;
 			children = (
 				8E3DA4A229D734DE0022EC31 /* AppDelegate.swift */,
+				8EF7A22D29F3FEA700318615 /* UIImageExt.swift */,
 				8E3DA4A429D734DE0022EC31 /* SceneDelegate.swift */,
 				8E97B4ED29D7619300213549 /* Login Page */,
 				8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */,
-				8E9AA93629DB2A0500AFA0A4 /* YorumlamaViewController.swift */,
 				8EC8E08729EDFC9A0021305A /* AAnaSayfa */,
-				8E7424E229E58E510062D391 /* DreamSaveViewController.swift */,
-				8ED079C629F32C6800BA5FCA /* RuyaSembollColletionViewViewController.swift */,
+				8E3C04562A02E43900156AAB /* semboller */,
 				8E50C28729EFC31400806F00 /* YeniRüyaKaydet */,
 				8EC8E08929EDFD420021305A /* rüyakaydetme */,
 				8E3DA4A829D734DE0022EC31 /* Main.storyboard */,
-				8ED079C829F330FD00BA5FCA /* SembolCollectionViewCell.swift */,
+				8E676A262A04222200CDE8F9 /* LauchScreenViewController.swift */,
+				8E7424E229E58E510062D391 /* DreamSaveViewController.swift */,
 				8E3DA4AB29D734E00022EC31 /* Assets.xcassets */,
 				8E3DA4DD29D7396B0022EC31 /* Fonts */,
 				8E3DA4AD29D734E00022EC31 /* LaunchScreen.storyboard */,
@@ -523,6 +537,7 @@
 				8E97B4EF29D761D400213549 /* LoginPageViewController.swift in Sources */,
 				8E3DA4A329D734DE0022EC31 /* AppDelegate.swift in Sources */,
 				8E97B4F129D76AB100213549 /* SecilenMenuViewController.swift in Sources */,
+				8E676A272A04222200CDE8F9 /* LauchScreenViewController.swift in Sources */,
 				8E5DEA1E29DB6C10000CAD41 /* tabbarController.swift in Sources */,
 				8E50C28929EFC4EE00806F00 /* dreamSave.swift in Sources */,
 				8E5DEA1829DB65F1000CAD41 /* RuyaModelleri.swift in Sources */,
@@ -531,8 +546,9 @@
 				8E7424E329E58E510062D391 /* DreamSaveViewController.swift in Sources */,
 				8E97B4F329D76AC100213549 /* TableViewVeriViewController.swift in Sources */,
 				8E50C28B29EFC57C00806F00 /* recordedDreams.swift in Sources */,
-				8E9AA93729DB2A0500AFA0A4 /* YorumlamaViewController.swift in Sources */,
+				8ED079CB29F336AF00BA5FCA /* SembolAramaViewController.swift in Sources */,
 				8E3DA4A529D734DE0022EC31 /* SceneDelegate.swift in Sources */,
+				8EF7A22E29F3FEA700318615 /* UIImageExt.swift in Sources */,
 				8E2AF5B929EAE44D00D0751F /* RuyaAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,9 +755,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TFALV8UYMA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myDream/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "My Dream";
@@ -755,7 +772,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sengun.myDream;
+				PRODUCT_BUNDLE_IDENTIFIER = sengun.myDreame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

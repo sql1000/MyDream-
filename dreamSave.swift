@@ -9,7 +9,12 @@ import UIKit
 import CoreData
 
 class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+
+    //let ruyametni = "Rüyanızı Bu Alana Girebilirsiniz."
     
+    @IBOutlet var ruyaTextView: UITextView!
+    
+    @IBOutlet var kaydetButton: UIButton!
     
     @IBOutlet var imageView: UIImageView!
     
@@ -26,10 +31,16 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         datePicer = UIDatePicker()
         datePicer?.datePickerMode = .date
         tarihText.inputView = datePicer
+        
+        /*ruyaTextView.delegate = self
+        ruyaTextView.text = ruyametni
+        ruyaTextView.textColor = .black */
+
+        
         
         datePicer?.addTarget(self, action: #selector(self.tarihGoster(datePicer:)), for: .valueChanged)
         
@@ -38,6 +49,9 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         view.addGestureRecognizer(dokunmaAlgilama)
         
         if chosenDreams != "" {
+            
+            kaydetButton.isHidden = true
+            
             //coredata
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -69,6 +83,12 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
                             let image = UIImage(data: imageData)
                             imageView.image = image
                         }
+                        
+                        if let ruya = result.value(forKey: "ruya") as? String {
+                            ruyaTextView.text = ruya
+                        }
+                        
+                        
                     }
                 }
                 
@@ -81,6 +101,8 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
             
             
         } else{
+            /*kaydetButton.isHidden = false
+            kaydetButton.isEnabled = false*/
             
         }
         
@@ -95,10 +117,31 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectimage))
         imageView.addGestureRecognizer(imageTapRecognizer)
         
+        /*ruyaTextView.isUserInteractionEnabled = true
+        let ruyaTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectimage))
+        ruyaTextView.addGestureRecognizer(ruyaTapRecognizer) */
+        
         navigationController?.navigationBar.topItem?.rightBarButtonItem =   UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addButtonClicked))
 
         
     }
+    // son eklemeler
+   /* private func ruyatextViewDidBeginEditing(_ ruyaTextView: UITextView) {
+        if ruyaTextView.textColor == .lightGray
+        {
+            ruyaTextView.text = ""
+            ruyaTextView.textColor = .black
+        }
+    }
+    
+    private func ruyaTextViewDidBeginEditing(_ ruyaTextView: UITextView) {
+        if ruyaTextView.text == ""
+        {
+            ruyaTextView.text = ruyametni
+            ruyaTextView.textColor = .black
+        }
+    } */
+    
     // Klavye Gizleme
     @objc func hideKeyboard(){
         view.endEditing(false)
@@ -121,9 +164,13 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         imageView.image = info[.originalImage] as? UIImage
+        /*kaydetButton.isEnabled = true*/
         self.dismiss(animated: true, completion: nil)
         
     }
+    
+    
+    
 
     
     @IBAction func saveButton(_ sender: Any) {
@@ -137,6 +184,7 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         
         newDream.setValue(duyguText.text!, forKey: "duygu")
         newDream.setValue(baslıkText.text!, forKey: "baslik")
+        newDream.setValue(ruyaTextView.text!, forKey: "ruya")
         
         if let tarih = Int(tarihText.text!){
             newDream.setValue(tarih, forKey: "tarih")

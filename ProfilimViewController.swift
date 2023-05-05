@@ -64,8 +64,8 @@ class ProfilimViewController: UIViewController {
     
     func cikisAler(title:String, message:String){
         let uyari = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        let noButton = UIAlertAction(title: "Evet", style: .default)
-        let cikisButton = UIAlertAction(title: "Hayır", style: UIAlertAction.Style.destructive) { UIAlertAction in
+        let noButton = UIAlertAction(title: "Hayır", style: .default)
+        let cikisButton = UIAlertAction(title: "Evet", style: UIAlertAction.Style.destructive) { UIAlertAction in
             do {
                 try Auth.auth().signOut()
                 UserDefaults.standard.removeObject(forKey: "rememberMe")
