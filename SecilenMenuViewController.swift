@@ -183,7 +183,7 @@ class SecilenMenuViewController: UIViewController {
             applyButtonEffect(button: button)
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.performSegue(withIdentifier: "ruya", sender: self.sembollerListesi, self.soruListesi)
+            //self.performSegue(withIdentifier: "ruya", sender: self.sembollerListesi, self.soruListesi)
         }
         
     }
