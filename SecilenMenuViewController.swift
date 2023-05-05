@@ -13,8 +13,9 @@ class SecilenMenuViewController: UIViewController {
     // RuyaSembol sinifindan array olusturudk
     var sembollerListesi:[RuyaSembol] = [RuyaSembol]()
     
-    
     var soruListesi:[SoruCevap] = [SoruCevap]()
+    
+    
     @IBOutlet var imageView: UIImageView!
     
     
@@ -142,24 +143,20 @@ class SecilenMenuViewController: UIViewController {
         
         
     }
-    // Veri Gonderirken Hazirlik
+    // Veri Gonderirken Hazirlik  chatgpt ile düzeltildi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ruya" {
             let destination = segue.destination as! tabbarController
             let destination0 = destination.viewControllers![0] as! SembolAramaViewController
             let destination1 = destination.viewControllers![1] as! SSSViewController
             
-            if let veri = sender as? [SoruCevap]{
-                destination1.soruCevapArray = veri
-            }
-            
-            if let veri = sender as? [RuyaSembol] {
-                destination0.sembol = veri
+            if let (semboller, sorular) = sender as? ([RuyaSembol], [SoruCevap]) {
+                destination0.sembol = semboller
+                destination1.soruCevapArray = sorular
             }
         }
-        
-  
     }
+
     
   
 
@@ -177,16 +174,18 @@ class SecilenMenuViewController: UIViewController {
     }
     
     
-    // Semboller lisstesini prepare func gondermek!
+    // Semboller lisstesini prepare func gondermek! chatgpt ile düzeltildi
     @IBAction func ruyaSembolleriButton(_ sender: Any) {
         if let button = sender as? UIButton {
             applyButtonEffect(button: button)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            //self.performSegue(withIdentifier: "ruya", sender: self.sembollerListesi, self.soruListesi)
-        }
         
+        let senderData = (sembollerListesi, soruListesi)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            self.performSegue(withIdentifier: "ruya", sender: senderData)
+        }
     }
+
     
     
     @IBAction func profilButton(_ sender: Any) {
