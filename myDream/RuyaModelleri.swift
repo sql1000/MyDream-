@@ -28,6 +28,24 @@ class RuyaSembol{
     
 }
 
+
+class SoruCevap{
+    var soruID:Int?
+    var soruIsim:String?
+    var soruCevap:String?
+    
+    init(){
+        
+    }
+    
+    init(soruID: Int?, soruIsim: String?, soruCevap: String?) {
+        self.soruID = soruID
+        self.soruIsim = soruIsim
+        self.soruCevap = soruCevap
+    }
+    
+}
+
 class RuyaSembolAnlam{
     
     var sembolID: Int?

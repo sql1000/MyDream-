@@ -13,6 +13,8 @@ class SecilenMenuViewController: UIViewController {
     // RuyaSembol sinifindan array olusturudk
     var sembollerListesi:[RuyaSembol] = [RuyaSembol]()
     
+    
+    var soruListesi:[SoruCevap] = [SoruCevap]()
     @IBOutlet var imageView: UIImageView!
     
     
@@ -28,7 +30,11 @@ class SecilenMenuViewController: UIViewController {
         navigationItem.backBarButtonItem?.tintColor = .systemBlue
         self.navigationItem.setHidesBackButton(true, animated: true)
         
+        let soru1 = SoruCevap(soruID: 1, soruIsim: "Ruya Nedir", soruCevap: "bosver")
+        let soru2 = SoruCevap(soruID: 1, soruIsim: "Herkes Ruya Gorur mu", soruCevap: "ben nerden bileyim aminakoiym")
         
+        soruListesi.append(soru1)
+        soruListesi.append(soru2)
         
         
         // Sinifizdan Objeler olusturduk.
@@ -141,13 +147,18 @@ class SecilenMenuViewController: UIViewController {
         if segue.identifier == "ruya" {
             let destination = segue.destination as! tabbarController
             let destination0 = destination.viewControllers![0] as! SembolAramaViewController
-            let destination1 = destination.viewControllers![1] as! RuyaSembollColletionViewViewController
+            let destination1 = destination.viewControllers![1] as! SSSViewController
+            
+            if let veri = sender as? [SoruCevap]{
+                destination1.soruCevapArray = veri
+            }
             
             if let veri = sender as? [RuyaSembol] {
-                destination0.sembol = veri  
-                destination1.sembol = veri
+                destination0.sembol = veri
             }
         }
+        
+  
     }
     
   
@@ -172,7 +183,7 @@ class SecilenMenuViewController: UIViewController {
             applyButtonEffect(button: button)
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.performSegue(withIdentifier: "ruya", sender: self.sembollerListesi)
+            self.performSegue(withIdentifier: "ruya", sender: self.sembollerListesi, self.soruListesi)
         }
         
     }

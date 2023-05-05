@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		537A6E5A54E6287CC572E79D /* libPods-myDreamUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAFAC5336204ED7AC9C05DF /* libPods-myDreamUITests.a */; };
 		7FF3F6EA2D6EDD43E937E0A2 /* libPods-myDreamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C81694B74995EA82ACBAB217 /* libPods-myDreamTests.a */; };
+		84C6D5282A053BD300B37B20 /* SSSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6D5272A053BD300B37B20 /* SSSTableViewCell.swift */; };
+		84C6D52A2A053C0F00B37B20 /* SSSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6D5292A053C0F00B37B20 /* SSSViewController.swift */; };
 		8E2AF5B929EAE44D00D0751F /* RuyaAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AF5B829EAE44D00D0751F /* RuyaAddViewController.swift */; };
 		8E3DA4A329D734DE0022EC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4A229D734DE0022EC31 /* AppDelegate.swift */; };
 		8E3DA4A529D734DE0022EC31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DA4A429D734DE0022EC31 /* SceneDelegate.swift */; };
@@ -60,6 +62,8 @@
 		1660F7E0FCD67C77971DEB84 /* Pods-myDreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-myDreamUITests/Pods-myDreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		38026D2E578A3454E9A76A09 /* Pods-myDreamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myDreamTests.release.xcconfig"; path = "Target Support Files/Pods-myDreamTests/Pods-myDreamTests.release.xcconfig"; sourceTree = "<group>"; };
 		3CAFAC5336204ED7AC9C05DF /* libPods-myDreamUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myDreamUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C6D5272A053BD300B37B20 /* SSSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSTableViewCell.swift; sourceTree = "<group>"; };
+		84C6D5292A053C0F00B37B20 /* SSSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSViewController.swift; sourceTree = "<group>"; };
 		8E2AF5B829EAE44D00D0751F /* RuyaAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuyaAddViewController.swift; sourceTree = "<group>"; };
 		8E3DA49F29D734DE0022EC31 /* myDream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myDream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3DA4A229D734DE0022EC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				8E50C28729EFC31400806F00 /* YeniRüyaKaydet */,
 				8EC8E08929EDFD420021305A /* rüyakaydetme */,
 				8E3DA4A829D734DE0022EC31 /* Main.storyboard */,
+				84C6D5292A053C0F00B37B20 /* SSSViewController.swift */,
+				84C6D5272A053BD300B37B20 /* SSSTableViewCell.swift */,
 				8E676A262A04222200CDE8F9 /* LauchScreenViewController.swift */,
 				8E7424E229E58E510062D391 /* DreamSaveViewController.swift */,
 				8E3DA4AB29D734E00022EC31 /* Assets.xcassets */,
@@ -532,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED079C929F330FD00BA5FCA /* SembolCollectionViewCell.swift in Sources */,
+				84C6D5282A053BD300B37B20 /* SSSTableViewCell.swift in Sources */,
 				8E5DEA1329DB632F000CAD41 /* ProfilimViewController.swift in Sources */,
 				8E3DA4A729D734DE0022EC31 /* RegisterPage.swift in Sources */,
 				8E97B4EF29D761D400213549 /* LoginPageViewController.swift in Sources */,
@@ -549,6 +556,7 @@
 				8ED079CB29F336AF00BA5FCA /* SembolAramaViewController.swift in Sources */,
 				8E3DA4A529D734DE0022EC31 /* SceneDelegate.swift in Sources */,
 				8EF7A22E29F3FEA700318615 /* UIImageExt.swift in Sources */,
+				84C6D52A2A053C0F00B37B20 /* SSSViewController.swift in Sources */,
 				8E2AF5B929EAE44D00D0751F /* RuyaAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
