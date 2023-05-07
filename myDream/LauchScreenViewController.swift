@@ -21,7 +21,9 @@ class LauchScreenViewController: UIViewController {
 
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4 ){ // giris ekrani 4 saniye sonra kapanacak
-            self.performSegue(withIdentifier: "splashGecildi", sender: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil) // Storyboard'ı oluşturun veya getirin
+            let loginController = storyboard.instantiateViewController(withIdentifier: "LoginPageViewController") as! LoginPageViewController // LoginController'ı oluşturun veya getirin (storyboard ID'si kullanarak)
+            self.navigationController?.pushViewController(loginController, animated: false) // Geçişi gerçekleştirin
         }
         
     }    
