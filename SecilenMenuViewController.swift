@@ -148,16 +148,16 @@ class SecilenMenuViewController: UIViewController {
         if segue.identifier == "ruya" {
             let destination = segue.destination as! tabbarController
             let destination0 = destination.viewControllers![0] as! SembolAramaViewController
-           // let destination1 = destination.viewControllers![1] as! SSSViewController
-            let destination1 = destination.viewControllers![1] as! RuyaSembollColletionViewViewController
-            /*if let (semboller, sorular) = sender as? ([RuyaSembol], [SoruCevap]) {
+            let destination1 = destination.viewControllers![1] as! SSSViewController
+            //let destination1 = destination.viewControllers![1] as! RuyaSembollColletionViewViewController
+            if let (semboller, sorular) = sender as? ([RuyaSembol], [SoruCevap]) {
                 destination0.sembol = semboller
                 destination1.soruCevapArray = sorular
-            }*/
+            }/*
             if let veri = sender as? [RuyaSembol] {
                 destination0.sembol = veri
                 destination1.sembol = veri
-            }
+            }*/
         }
     }
 
@@ -186,7 +186,7 @@ class SecilenMenuViewController: UIViewController {
         
         let senderData = (sembollerListesi, soruListesi)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.performSegue(withIdentifier: "ruya", sender: self.sembollerListesi)
+            self.performSegue(withIdentifier: "ruya", sender: senderData)
         }
     }
 

@@ -28,46 +28,29 @@ class RuyaSembollColletionViewViewController: UIViewController {
         
         /*
          let tasarim: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-
                  let genislik = self.view.frame.size.width
-
                  tasarim.sectionInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
-
-                 
-
                  //Yatay da
-
-                 
-
                  tasarim.itemSize = CGSize(width: (genislik - 30) / 3 , height: (genislik - 30) / 3)
-
                  tasarim.minimumInteritemSpacing = 5
-
                  tasarim.minimumLineSpacing = 5
-
-                 
-
                  collectionView!.collectionViewLayout = tasarim
          */
-
-
         
         // Custom CollextionView tasarimi
-        let tasarim: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-                let genislik = self.collectionViewSembol.frame.size.width
-        tasarim.sectionInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
-                
-                //Yatay da izahlama
-                
-                tasarim.itemSize = CGSize(width: (genislik - 30) / 3 , height: (genislik - 30) / 3)
-                tasarim.minimumInteritemSpacing = 5
-                tasarim.minimumLineSpacing = 5
-                
-        collectionViewSembol!.collectionViewLayout = tasarim
-
         collectionViewSembol.delegate = self
         collectionViewSembol.dataSource = self
         searcBar.delegate = self
+                let tasarim: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+                let genislik = self.collectionViewSembol.frame.size.width
+                tasarim.sectionInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+                //Yatay da izahlama
+                tasarim.itemSize = CGSize(width: (genislik - 40) / 3 , height: (genislik - 40) / 3)
+                tasarim.minimumInteritemSpacing = 5
+                tasarim.minimumLineSpacing = 5
+                collectionViewSembol!.collectionViewLayout = tasarim
+
+        
         
         
     }
@@ -93,6 +76,11 @@ extension RuyaSembollColletionViewViewController: UICollectionViewDelegate, UICo
         }else{
             return sembol.count
         }
+    }
+    // tasarım ile ilgili
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width / 3 - 10
+        return CGSize(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -150,6 +138,9 @@ extension RuyaSembollColletionViewViewController: UICollectionViewDelegate, UICo
        
         
     }
+    
+  
+
     
     
     
