@@ -33,9 +33,16 @@ class SecilenMenuViewController: UIViewController {
         
         let soru1 = SoruCevap(soruID: 1, soruIsim: "Ruya Nedir", soruCevap: "bosver")
         let soru2 = SoruCevap(soruID: 1, soruIsim: "Herkes Ruya Gorur mu", soruCevap: "ben nerden bileyim aminakoiym")
+        let soru3 = SoruCevap(soruID: 1, soruIsim: "Ask Laftan Anlar mi", soruCevap: "Anlamaz")
+        let soru4 = SoruCevap(soruID: 1, soruIsim: "Dalga kac CM", soruCevap: "15 KM")
+        let soru5 = SoruCevap(soruID: 1, soruIsim: "SEN ALIKTIN MI CAVO", soruCevap: "M1 AIR")
         
         soruListesi.append(soru1)
         soruListesi.append(soru2)
+        soruListesi.append(soru3)
+        soruListesi.append(soru4)
+        soruListesi.append(soru5)
+        
         
         
         // Sinifizdan Objeler olusturduk.
