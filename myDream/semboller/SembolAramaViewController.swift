@@ -30,11 +30,11 @@ class SembolAramaViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.dataSource = self
         searchBar.delegate = self
         
-        
+       
         
     }
     @objc func hideKeyboard(){
-        view.endEditing(true)
+        view.endEditing(false)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

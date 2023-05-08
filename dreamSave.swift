@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class dreamSave: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     //let ruyametni = "Rüyanızı Bu Alana Girebilirsiniz."
     
@@ -30,7 +30,9 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     
     var chosenDreams = ""
     var chosenDreamsId : UUID?
+    let ruyametni = "Rüyanızı buraya girebilirsiniz :)"
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,14 +40,18 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         datePicer?.datePickerMode = .date
         tarihText.inputView = datePicer
         
-        /*ruyaTextView.delegate = self
+        ruyaTextView.delegate = self
         ruyaTextView.text = ruyametni
-        ruyaTextView.textColor = .black */
+        ruyaTextView.textColor = .black
+
 
         
-        
-        datePicer?.addTarget(self, action: #selector(self.tarihGoster(datePicer:)), for: .valueChanged)
-        
+       // datePicer?.addTarget(self, action: #selector(self.tarihGoster(datePicer:)), for: .valueChanged)
+        tarihText.text = Date().description // şu anki tarihin metin gösterimi
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        tarihText.text = dateFormatter.string(from: Date()) // şu anki tarihin özelleştirilmiş formatlı metin gösterimi
+
         
         let dokunmaAlgilama = UITapGestureRecognizer(target: self, action: #selector(self.dokumaAlgilama))
         view.addGestureRecognizer(dokunmaAlgilama)
@@ -81,10 +87,10 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
                             tarihText.text = String(tarih)
                         }
                         
-                        if let imageData = result.value(forKey: "image") as? Data{
+                        /*if let imageData = result.value(forKey: "image") as? Data{
                             let image = UIImage(data: imageData)
                             imageView.image = image
-                        }
+                        } */
                         
                         if let ruya = result.value(forKey: "ruya") as? String {
                             ruyaTextView.text = ruya
@@ -116,7 +122,7 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         view.addGestureRecognizer(gestureRecognizer)
         
         //imageView.isUserInteractionEnabled = true
-        let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectimage))
+        //let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectimage))
         //imageView.addGestureRecognizer(imageTapRecognizer)
         
         /*ruyaTextView.isUserInteractionEnabled = true
@@ -128,21 +134,19 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         
     }
     // son eklemeler
-   /* private func ruyatextViewDidBeginEditing(_ ruyaTextView: UITextView) {
-        if ruyaTextView.textColor == .lightGray
+    func textViewDidBeginEditing(_ ruyaTextView: UITextView) {
+        
+        if (ruyaTextView.text == "Rüyanızı buraya girebilirsiniz :)")
         {
             ruyaTextView.text = ""
             ruyaTextView.textColor = .black
         }
+            
+        
+      
     }
     
-    private func ruyaTextViewDidBeginEditing(_ ruyaTextView: UITextView) {
-        if ruyaTextView.text == ""
-        {
-            ruyaTextView.text = ruyametni
-            ruyaTextView.textColor = .black
-        }
-    } */
+
     
     // Klavye Gizleme
     @objc func hideKeyboard(){
@@ -153,7 +157,7 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         performSegue(withIdentifier: "recordedDreams", sender: nil)
     }
     
-    @objc func selectimage(){
+    /*@objc func selectimage(){
         
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -162,14 +166,14 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         present(picker, animated: true, completion: nil)
         
         
-    }
+    }/
     
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         imageView.image = info[.originalImage] as? UIImage
         /*kaydetButton.isEnabled = true*/
         self.dismiss(animated: true, completion: nil)
         
-    }
+    } */
     
     
     
@@ -213,7 +217,9 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         
     }
     
-    @objc func tarihGoster(datePicer:UIDatePicker){
+
+
+   /* @objc func tarihGoster(datePicer:UIDatePicker){
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
@@ -222,7 +228,7 @@ class dreamSave: UIViewController, UIImagePickerControllerDelegate & UINavigatio
         tarihText.text = alinanTarih
         
         //view.endEditing(true)
-    }
+    } */
     
     
     @objc func dokumaAlgilama(){

@@ -35,6 +35,8 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
+        
+        
         // tableView arka planı değiştirme
         // self.tableView.backgroundColor = UIColor.systemBlue
 
@@ -150,7 +152,6 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
             destinationVC.chosenDreams = selectedDreams
             destinationVC.chosenDreamsId = selectedDreamsId
         }
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -164,16 +165,13 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
         if editingStyle == .delete {
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            
             let context = appDelegate.persistentContainer.viewContext
-            
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Dreams")
-            
             let idString = idArray[indexPath.row].uuidString
             
             fetchRequest.predicate = NSPredicate(format: "id = %@", idString)
-            
             fetchRequest.returnsObjectsAsFaults = false
+            
             do{
             let results = try context.fetch(fetchRequest)
                 
@@ -186,24 +184,16 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
                             if id == idArray[indexPath.row]{
                                 
                                 context.delete(result)
-                                
                                 baslikArray.remove(at: indexPath.row)
                                 /*ruyaArray.remove(at: indexPath.row)*/
-                                
                                 idArray.remove(at: indexPath.row)
-                                
                                 self.tableView.reloadData()
-                                
                                 do {
                                     try context.save()
                                 } catch{
                                     print("error")
                                 }
-                                
                                 break
-                                    
-                                
-                                
                             }
                         }
                     }
@@ -211,17 +201,8 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
             } catch {
                 print("hata")
             }
-            
         }
-        
-        
-        
-        
     }
-    
-    
-    
-
  }
 
 
