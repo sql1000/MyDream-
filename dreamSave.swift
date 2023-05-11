@@ -43,7 +43,11 @@ class dreamSave: UIViewController, UITextViewDelegate, UIImagePickerControllerDe
         ruyaTextView.delegate = self
         ruyaTextView.text = ruyametni
         ruyaTextView.textColor = .black
-
+        
+// textviewin cerceve rengini değiştirdik..
+        ruyaTextView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
+        ruyaTextView.layer.borderWidth = 1.0
+        ruyaTextView.layer.cornerRadius = 5
 
         
        // datePicer?.addTarget(self, action: #selector(self.tarihGoster(datePicer:)), for: .valueChanged)

@@ -28,6 +28,7 @@
 		8E5DEA1629DB65D3000CAD41 /* myDream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1429DB65D3000CAD41 /* myDream.xcdatamodeld */; };
 		8E5DEA1829DB65F1000CAD41 /* RuyaModelleri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */; };
 		8E5DEA1E29DB6C10000CAD41 /* tabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */; };
+		8E62F36B2A0C1448006B4DAB /* favoriSembollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E62F36A2A0C1448006B4DAB /* favoriSembollerViewController.swift */; };
 		8E676A272A04222200CDE8F9 /* LauchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E676A262A04222200CDE8F9 /* LauchScreenViewController.swift */; };
 		8E7424E329E58E510062D391 /* DreamSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7424E229E58E510062D391 /* DreamSaveViewController.swift */; };
 		8E97B4EF29D761D400213549 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97B4EE29D761D400213549 /* LoginPageViewController.swift */; };
@@ -103,6 +104,7 @@
 		8E5DEA1529DB65D3000CAD41 /* myDream.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myDream.xcdatamodel; sourceTree = "<group>"; };
 		8E5DEA1729DB65F1000CAD41 /* RuyaModelleri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuyaModelleri.swift; sourceTree = "<group>"; };
 		8E5DEA1D29DB6C10000CAD41 /* tabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarController.swift; sourceTree = "<group>"; };
+		8E62F36A2A0C1448006B4DAB /* favoriSembollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoriSembollerViewController.swift; sourceTree = "<group>"; };
 		8E676A262A04222200CDE8F9 /* LauchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchScreenViewController.swift; sourceTree = "<group>"; };
 		8E7424E229E58E510062D391 /* DreamSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSaveViewController.swift; sourceTree = "<group>"; };
 		8E97B4EE29D761D400213549 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				8E50C28729EFC31400806F00 /* YeniRüyaKaydet */,
 				8EC8E08929EDFD420021305A /* rüyakaydetme */,
 				8E3DA4A829D734DE0022EC31 /* Main.storyboard */,
+				8E62F36A2A0C1448006B4DAB /* favoriSembollerViewController.swift */,
 				84C6D5292A053C0F00B37B20 /* SSSViewController.swift */,
 				84C6D5272A053BD300B37B20 /* SSSTableViewCell.swift */,
 				8E676A262A04222200CDE8F9 /* LauchScreenViewController.swift */,
@@ -540,6 +543,7 @@
 				8ED079C929F330FD00BA5FCA /* SembolCollectionViewCell.swift in Sources */,
 				84C6D5282A053BD300B37B20 /* SSSTableViewCell.swift in Sources */,
 				8E5DEA1329DB632F000CAD41 /* ProfilimViewController.swift in Sources */,
+				8E62F36B2A0C1448006B4DAB /* favoriSembollerViewController.swift in Sources */,
 				8E3DA4A729D734DE0022EC31 /* RegisterPage.swift in Sources */,
 				8E97B4EF29D761D400213549 /* LoginPageViewController.swift in Sources */,
 				8E3DA4A329D734DE0022EC31 /* AppDelegate.swift in Sources */,
@@ -744,6 +748,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -751,9 +756,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sengun.myDreams;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -775,17 +783,21 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sengun.myDreame;
+				PRODUCT_BUNDLE_IDENTIFIER = sengun.myDreams;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

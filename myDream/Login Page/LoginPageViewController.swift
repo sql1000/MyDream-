@@ -28,6 +28,8 @@ class LoginPageViewController: UIViewController {
                 target: nil,
                 action: nil
             )
+        navigationItem.setHidesBackButton(true, animated: false)
+
         navigationItem.backBarButtonItem?.tintColor = .red
         
         imageView.image = UIImage.gif(asset: "giris2")
@@ -51,7 +53,9 @@ class LoginPageViewController: UIViewController {
     }
     
   
-    
+
+
+   
     
     
     @IBAction func loginPageLoginButton(_ sender: Any) {

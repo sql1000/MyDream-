@@ -87,7 +87,8 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
         baslikArray.removeAll(keepingCapacity: false)
         idArray.removeAll(keepingCapacity: false)
         
-        
+       
+
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -107,6 +108,7 @@ class recordedDreams: UIViewController, UITableViewDelegate, UITableViewDataSour
                     if let ruya = result.value(forKey: "ruya") as? String{
                         self.ruyaArray.append(ruya)
                     }
+                    
                     
                     if let id = result.value(forKey: "id") as? UUID{
                         self.idArray.append(id)
