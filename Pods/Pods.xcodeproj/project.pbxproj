@@ -1640,7 +1640,7 @@
 		79D4C69EB6409EA2CF93318A204070DF /* FTrackedQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTrackedQuery.m; path = FirebaseDatabase/Sources/Persistence/FTrackedQuery.m; sourceTree = "<group>"; };
 		7A73C4758DFB16564D2947ECE9ED6FBA /* status.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = status.h; path = include/leveldb/status.h; sourceTree = "<group>"; };
 		7ACC8490B3CBF872A2C5988F85FF93AD /* FIREmailLinkSignInRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIREmailLinkSignInRequest.h; path = FirebaseAuth/Sources/Backend/RPC/FIREmailLinkSignInRequest.h; sourceTree = "<group>"; };
-		7ADA6E1C36C5E2CB11B6BA14985DDA27 /* Pods-myDream */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-myDream"; path = Pods_myDream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ADA6E1C36C5E2CB11B6BA14985DDA27 /* Pods_myDream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myDream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4E6DA464E4F3839D6724C5F17133DF /* FEventRaiser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEventRaiser.m; path = FirebaseDatabase/Sources/Core/View/FEventRaiser.m; sourceTree = "<group>"; };
 		7B95623A3D437199A88DAA848EBDDDF3 /* FIRGoogleAuthProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRGoogleAuthProvider.m; path = FirebaseAuth/Sources/AuthProvider/Google/FIRGoogleAuthProvider.m; sourceTree = "<group>"; };
 		7BBB172360B4E05E4C3EC9115098449A /* FirebaseCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseCore.h; path = FirebaseCore/Sources/Public/FirebaseCore/FirebaseCore.h; sourceTree = "<group>"; };
@@ -2960,7 +2960,7 @@
 				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher.framework */,
 				0A9F46A999C47653013D3AD854352507 /* leveldb-library */,
 				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */,
-				7ADA6E1C36C5E2CB11B6BA14985DDA27 /* Pods-myDream */,
+				7ADA6E1C36C5E2CB11B6BA14985DDA27 /* Pods_myDream.framework */,
 				AB136615B31D9B14A09D03E66FF39832 /* Pods-myDreamTests */,
 				EB299986E9421FA01AF0A2345FC29793 /* Pods-myDreamUITests */,
 				3347A1AB6546F0A3977529B8F199DC41 /* FBLPromises.framework */,
@@ -4325,7 +4325,7 @@
 			);
 			name = "Pods-myDream";
 			productName = Pods_myDream;
-			productReference = 7ADA6E1C36C5E2CB11B6BA14985DDA27 /* Pods-myDream */;
+			productReference = 7ADA6E1C36C5E2CB11B6BA14985DDA27 /* Pods_myDream.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		736AF68F6527ACF6B4A4C54728824A1C /* FirebaseDatabase */ = {
