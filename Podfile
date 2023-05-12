@@ -10,6 +10,7 @@ target 'myDream' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Core'
 	pod 'Google-Mobile-Ads-SDK'
+
 end
   target 'myDreamTests' do
     inherit! :search_paths

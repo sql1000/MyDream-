@@ -7,7 +7,12 @@
 
 import UIKit
 import Firebase
+import AppTrackingTransparency
+
+
 class LoginPageViewController: UIViewController {
+    
+    
     
     
     @IBOutlet weak var rememberMe: UISwitch!
@@ -28,6 +33,30 @@ class LoginPageViewController: UIViewController {
                 target: nil,
                 action: nil
             )
+        
+        ATTrackingManager.requestTrackingAuthorization { status in
+                    // Kullanıcının izin durumunu işleyin
+                    switch status {
+                    case .authorized:
+                        // Kullanıcı izin verdi, takip işlemlerine devam edin
+                        break
+                    case .denied:
+                        // Kullanıcı izin vermedi, takip işlemlerini durdurun veya alternatif bir yol sunun
+                        break
+                    case .restricted, .notDetermined:
+                        // Kullanıcının izin vermediği veya henüz belirlenmediği durumları işleyin
+                        break
+                    @unknown default:
+                        break
+                    }
+                }
+        
+       /* let guestButton = UIButton(type: .system)
+                guestButton.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
+                guestButton.setTitle("Misafir Olarak Giriş Yap", for: .normal)
+                guestButton.addTarget(self, action: #selector(guestButtonTapped), for: .touchUpInside)
+                view.addSubview(guestButton) */
+        
         navigationItem.setHidesBackButton(true, animated: false)
 
         navigationItem.backBarButtonItem?.tintColor = .red
@@ -47,6 +76,31 @@ class LoginPageViewController: UIViewController {
         view.addGestureRecognizer(gestureRecognizer)
            
     }
+    
+    @objc func guestButtonTapped() {
+            // Misafir kullanıcıya özgü işlemleri burada gerçekleştirebilirsiniz.
+            // Örneğin, belirli bir kullanıcı kimliği atanabilir veya misafir oturumu açılabilir.
+            // Bu kod bloğunda misafir kullanıcıya ait özelliklerin tanımlanması gerekmektedir.
+            
+            // Örnek olarak, bir misafir oturumu açıldığını ve ana sayfaya yönlendirildiğini varsayalım:
+            let guestSession = Session(userId: "guest")
+            navigateToHomePage(session: guestSession)
+        }
+    
+    func navigateToHomePage(session: Session) {
+            // Ana sayfaya yönlendirme işlemleri burada gerçekleştirilebilir.
+            // Misafir kullanıcının oturum bilgilerini taşıyan session parametresini kullanabilirsiniz.
+        self.performSegue(withIdentifier: "anaSayfa", sender: nil)
+
+        // Ana sayfayı temsil eden bir ViewController oluşturulması
+           
+        }
+    
+
+    struct Session {
+        let userId: String
+        // Misafir kullanıcıya ait diğer özellikleri burada tanımlayabilirsiniz.
+    }
     // KLAVYE GİZLEME
     @objc func hideKeyboard(){
         view.endEditing(false)
@@ -56,6 +110,16 @@ class LoginPageViewController: UIViewController {
 
 
    
+    @IBAction func guestButton(_ sender: Any) {
+        Auth.auth().signInAnonymously(completion: { authResult, error in
+            if let error = error{
+                print("giriş başarısız")
+            } else {
+                print("giriş başarılı")
+                self.performSegue(withIdentifier: "anaSayfa", sender: nil)
+            }
+        })
+    }
     
     
     @IBAction func loginPageLoginButton(_ sender: Any) {

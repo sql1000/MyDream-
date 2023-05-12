@@ -8,9 +8,11 @@
 import UIKit
 import FirebaseDatabase
 import SafariServices
+import GoogleMobileAds
 
 
-class SecilenMenuViewController: UIViewController {
+
+class SecilenMenuViewController: UIViewController, GADFullScreenContentDelegate {
     // RuyaSembol sinifindan array olusturudk
     var sembollerListesi:[RuyaSembol] = [RuyaSembol]()
     
@@ -19,8 +21,8 @@ class SecilenMenuViewController: UIViewController {
 
     
     @IBOutlet var imageView: UIImageView!
-    
-    
+    private var interstitial: GADInterstitialAd?
+
     override func viewDidLoad() {
         navigationItem.title = ""
         super.viewDidLoad()
@@ -34,7 +36,21 @@ class SecilenMenuViewController: UIViewController {
         navigationItem.backBarButtonItem?.tintColor = .systemBlue
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        
+        //Reklam         //ca-app-pub-3940256099942544/4411468910
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-3940256099942544/4411468910",
+                               request: request,
+                               completionHandler: { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: (error.localizedDescription)")
+                return
+                
+            }
+            interstitial = ad
+            interstitial?.fullScreenContentDelegate = self
+            
+        }
+        )
         
         
         
@@ -1601,6 +1617,22 @@ class SecilenMenuViewController: UIViewController {
         
     }
     
+    func ad( ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Ad did fail to present full screen content.")
+        
+    }        /// Tells the delegate that the ad will present full screen content.
+    func adWillPresentFullScreenContent( ad: GADFullScreenPresentingAd) {
+        print("Ad will present full screen content.")
+        
+    }
+    ///Tells the delegate that the ad dismissed full screen content.
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did dismiss full screen content.")
+         
+     }
+    
+    
+    
   
     
     // Veri Gonderirken Hazirlik  chatgpt ile düzeltildi
@@ -1634,6 +1666,12 @@ class SecilenMenuViewController: UIViewController {
             self.performSegue(withIdentifier: "ruyaKaydet", sender: nil)
         }
         
+        if interstitial != nil {
+                    interstitial!.present(fromRootViewController: self)
+                  } else {
+                    print("Ad wasn't ready")
+                  }
+        
         
     }
     
@@ -1648,6 +1686,12 @@ class SecilenMenuViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.performSegue(withIdentifier: "ruya", sender: senderData)
         }
+        
+        if interstitial != nil {
+                    interstitial!.present(fromRootViewController: self)
+                  } else {
+                    print("Ad wasn't ready")
+                  }
     }
 
     //Sayfa Tanıtımı!
@@ -1660,6 +1704,8 @@ class SecilenMenuViewController: UIViewController {
                     present(safariViewController, animated: true, completion: nil)
                 }
             }
+        
+       
     }
     // mail göderhttps://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSMTFCWVDLJBZbZqJmlsfgVlgQxMBDlwvDmKbnRwgJLwKwlQNhNMLDCvNjSxPbFhhBGbkgCS
    // thedvlprs instagram https://www.instagram.com/thedvlprs/
@@ -1672,6 +1718,11 @@ class SecilenMenuViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.performSegue(withIdentifier: "profil", sender: nil)
         }
+        if interstitial != nil {
+                    interstitial!.present(fromRootViewController: self)
+                  } else {
+                    print("Ad wasn't ready")
+                  }
         
     }
     

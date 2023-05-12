@@ -7,8 +7,9 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 
-class dreamSave: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class dreamSave: UIViewController, UITextViewDelegate, GADFullScreenContentDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     //let ruyametni = "Rüyanızı Bu Alana Girebilirsiniz."
     
@@ -32,9 +33,32 @@ class dreamSave: UIViewController, UITextViewDelegate, UIImagePickerControllerDe
     var chosenDreamsId : UUID?
     let ruyametni = "Rüyanızı buraya girebilirsiniz :)"
     
+    private var interstitial: GADInterstitialAd?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //Reklam         //ca-app-pub-3940256099942544/4411468910
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-3940256099942544/4411468910",
+                               request: request,
+                               completionHandler: { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: (error.localizedDescription)")
+                return
+                
+            }
+            interstitial = ad
+            interstitial?.fullScreenContentDelegate = self
+            
+        }
+        )
+        
+        
+        
+        
 
         datePicer = UIDatePicker()
         datePicer?.datePickerMode = .date
@@ -136,7 +160,24 @@ class dreamSave: UIViewController, UITextViewDelegate, UIImagePickerControllerDe
         navigationController?.navigationBar.topItem?.rightBarButtonItem =   UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addButtonClicked))
 
         
+        
+        
     }
+    
+    func ad( ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Ad did fail to present full screen content.")
+        
+    }        /// Tells the delegate that the ad will present full screen content.
+    func adWillPresentFullScreenContent( ad: GADFullScreenPresentingAd) {
+        print("Ad will present full screen content.")
+        
+    }
+    ///Tells the delegate that the ad dismissed full screen content.
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did dismiss full screen content.")
+         
+     }
+    
     // son eklemeler
     func textViewDidBeginEditing(_ ruyaTextView: UITextView) {
         
@@ -198,6 +239,8 @@ class dreamSave: UIViewController, UITextViewDelegate, UIImagePickerControllerDe
         
         if let tarih = Int(tarihText.text!){
             newDream.setValue(tarih, forKey: "tarih")
+            
+            
         }
         
         newDream.setValue(UUID(), forKey: "id")
@@ -217,6 +260,11 @@ class dreamSave: UIViewController, UITextViewDelegate, UIImagePickerControllerDe
         NotificationCenter.default.post(name: NSNotification.Name("newData"), object: nil)
         self.navigationController?.popViewController(animated: true)
         
+        if interstitial != nil {
+                    interstitial!.present(fromRootViewController: self)
+                  } else {
+                    print("Ad wasn't ready")
+                  }
         
         
     }
